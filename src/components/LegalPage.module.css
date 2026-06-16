@@ -1,0 +1,215 @@
+.page {
+  min-height: 80vh;
+}
+
+/* ── Hero header ── */
+.hero {
+  padding: 100px 5% 64px;
+  background: radial-gradient(circle at 50% 80%, rgba(47, 128, 255, 0.08), transparent 55%),
+              var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 700px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 209, 255, 0.3);
+  background: rgba(0, 209, 255, 0.06);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'Inter Tight', sans-serif;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* ── Body ── */
+.body {
+  padding: 72px 5% 100px;
+  background: var(--bg-primary);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ── Typography exposed to child pages via global classes ── */
+
+/* Section block */
+:global(.legal-section) {
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+:global(.legal-section:last-child) {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Section heading (h2) */
+:global(.legal-h2) {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Inter Tight', sans-serif;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+:global(.legal-h2-num) {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  background: rgba(0, 209, 255, 0.08);
+  border: 1px solid rgba(0, 209, 255, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Subsection heading (h3) */
+:global(.legal-h3) {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 28px 0 10px;
+  font-family: 'Inter Tight', sans-serif;
+}
+
+:global(.legal-h3-num) {
+  color: var(--accent-blue);
+  margin-right: 6px;
+}
+
+/* Paragraphs */
+:global(.legal-p) {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin: 0 0 16px;
+}
+
+/* Lists */
+:global(.legal-ul) {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+:global(.legal-ul li) {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+:global(.legal-ul li::before) {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* Highlight callout box */
+:global(.legal-callout) {
+  background: rgba(47, 128, 255, 0.05);
+  border: 1px solid rgba(47, 128, 255, 0.2);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Warning callout */
+:global(.legal-callout-warn) {
+  background: rgba(255, 160, 50, 0.06);
+  border: 1px solid rgba(255, 160, 50, 0.25);
+  border-left: 3px solid rgba(255, 160, 50, 0.8);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Contact link */
+:global(.legal-email) {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 209, 255, 0.3);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+:global(.legal-email:hover) {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 5% 48px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .body {
+    padding: 48px 5% 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+}

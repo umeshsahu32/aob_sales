@@ -1,0 +1,257 @@
+.section {
+  padding: 100px 5%;
+  background: var(--bg-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 72px;
+}
+
+/* ── Service card ── */
+.serviceCard {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  align-items: start;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.serviceCard:hover {
+  border-color: rgba(47, 128, 255, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.serviceCardReverse {
+  grid-template-columns: 340px 1fr;
+}
+
+.serviceCardReverse .cardContent {
+  order: 2;
+}
+
+.serviceCardReverse .capabilitiesPanel {
+  order: 1;
+}
+
+/* ── Left / main content ── */
+.cardContent {
+  padding: 48px 40px 48px 48px;
+}
+
+.serviceCardReverse .cardContent {
+  padding: 48px 48px 48px 40px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.serviceNumber {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-blue);
+  background: rgba(47, 128, 255, 0.1);
+  border: 1px solid rgba(47, 128, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.serviceIcon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.serviceTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: 'Inter Tight', sans-serif;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.serviceDesc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0 0 32px;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.colLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+.dotList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.dotList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.blueDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.cyanDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+/* ── Right / capabilities panel ── */
+.capabilitiesPanel {
+  background: rgba(47, 128, 255, 0.04);
+  border-left: 1px solid var(--border-color);
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.serviceCardReverse .capabilitiesPanel {
+  border-left: none;
+  border-right: 1px solid var(--border-color);
+}
+
+.capLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.capGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.capTag {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: border-color 0.25s, color 0.25s;
+  line-height: 1.3;
+}
+
+.serviceCard:hover .capTag {
+  border-color: rgba(47, 128, 255, 0.3);
+  color: var(--accent-cyan);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .serviceCard,
+  .serviceCardReverse {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCardReverse .cardContent,
+  .serviceCardReverse .capabilitiesPanel {
+    order: unset;
+  }
+
+  .capabilitiesPanel,
+  .serviceCardReverse .capabilitiesPanel {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .cardContent,
+  .serviceCardReverse .cardContent {
+    padding: 36px 32px 28px;
+  }
+
+  .capabilitiesPanel {
+    padding: 28px 32px 36px;
+  }
+
+  .capGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 5%;
+  }
+
+  .list {
+    gap: 32px;
+    margin-top: 56px;
+  }
+
+  .cardContent,
+  .serviceCardReverse .cardContent {
+    padding: 28px 24px 24px;
+  }
+
+  .capabilitiesPanel {
+    padding: 24px;
+  }
+
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .serviceTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .capGrid {
+    grid-template-columns: 1fr;
+  }
+}

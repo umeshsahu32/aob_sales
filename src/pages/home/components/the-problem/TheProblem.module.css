@@ -1,0 +1,110 @@
+.section {
+  padding: var(--section-padding);
+  background-color: var(--bg-primary);
+  text-align: center;
+}
+
+/* ── Label ── */
+.label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0274b0;
+  margin-bottom: 16px;
+}
+
+/* ── Heading ── */
+.headline {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0274b0;
+  margin-bottom: 16px;
+}
+
+/* ── Subtext ── */
+.subtext {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto 48px;
+}
+
+/* ── Three cards ── */
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto 52px;
+}
+
+.col {
+  flex: 1;
+  padding: 28px 32px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  transition: box-shadow 0.2s;
+}
+
+/* Middle card — blue border highlight */
+.colActive {
+  background: #ffffff;
+  border-color: #006da5;
+  box-shadow: 0 0 0 1px #006da5, 0 4px 18px rgba(0, 109, 165, 0.12);
+}
+
+.colTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.colSub {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ── Conclusion ── */
+.conclusion {
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.conclusion p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.conclusion strong {
+  color: #0274b0;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: normal;
+}
+
+@media (max-width: 600px) {
+  .columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .col {
+    width: 100%;
+    max-width: 320px;
+  }
+}

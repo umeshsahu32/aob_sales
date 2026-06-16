@@ -1,0 +1,107 @@
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  min-width: 300px;
+  max-width: 400px;
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  overflow: hidden;
+}
+
+.success {
+  border-color: rgba(0, 200, 130, 0.35);
+  background: color-mix(in srgb, var(--bg-secondary) 94%, rgba(0, 200, 130, 0.3));
+}
+
+.error {
+  border-color: rgba(255, 80, 80, 0.35);
+  background: color-mix(in srgb, var(--bg-secondary) 94%, rgba(255, 80, 80, 0.2));
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  line-height: 0;
+}
+
+.message {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: var(--text-secondary);
+  line-height: 0;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  margin-top: 1px;
+}
+
+.close:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Progress shrink bar at the bottom */
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform-origin: left;
+  animation: shrink linear both;
+  border-radius: 0 0 12px 12px;
+}
+
+.progress_success {
+  background: rgba(0, 200, 130, 0.6);
+}
+
+.progress_error {
+  background: rgba(255, 80, 80, 0.6);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes shrink {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+
+@media (max-width: 480px) {
+  .toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+    min-width: unset;
+  }
+}

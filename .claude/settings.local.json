@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx eslint *)",
+      "Bash(npm run *)",
+      "PowerShell(Get-ChildItem -Path \"e:\\\\aob-sales\\\\src\" -Recurse -Force | Where-Object { -not $_.PSIsContainer } | ForEach-Object { $_.FullName.Replace\\(\"e:\\\\aob-sales\\\\\", \"\"\\) } | Sort-Object)"
+    ]
+  }
+}

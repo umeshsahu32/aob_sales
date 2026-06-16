@@ -1,0 +1,9 @@
+export { default as Hero } from './hero/Hero';
+export { default as TheProblem } from './the-problem/TheProblem';
+export { default as AobApproach } from './aob-approach/AobApproach';
+export { default as CoreFramework } from './core-framework/CoreFramework';
+export { default as ServicesSection } from './services-section/ServicesSection';
+export { default as WhyAob } from './why-aob/WhyAob';
+export { default as Industries } from './industries/Industries';
+export { default as Philosophy } from './philosophy/Philosophy';
+export { default as FinalCta } from './final-cta/FinalCta';

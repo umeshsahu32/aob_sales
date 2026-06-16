@@ -1,0 +1,303 @@
+.section {
+  padding: 60px 5% 120px;
+  background: var(--bg-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ─────────────────────── Info panel ─────────────────────── */
+.info {
+  position: sticky;
+  top: 100px;
+}
+
+.infoHeading {
+  font-size: 44px;
+  font-weight: 700;
+  font-family: 'Inter Tight', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+.infoBody {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0 0 40px;
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: border-color 0.3s;
+}
+
+.infoCard:hover {
+  border-color: rgba(47, 128, 255, 0.35);
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(47, 128, 255, 0.1);
+  border: 1px solid rgba(47, 128, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 4px;
+}
+
+.infoValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pillar {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  background: rgba(47, 128, 255, 0.08);
+  border: 1px solid rgba(47, 128, 255, 0.2);
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+/* ─────────────────────── Form card ─────────────────────── */
+.formCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.form {
+  padding: 48px;
+}
+
+.formHeader {
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.formTitle {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Inter Tight', sans-serif;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ─────────────────────── Fields ─────────────────────── */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.2px;
+}
+
+.input,
+.textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(47, 128, 255, 0.12);
+}
+
+.inputError {
+  border-color: rgba(255, 80, 80, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(255, 80, 80, 0.08) !important;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.6;
+}
+
+.error {
+  font-size: 12px;
+  color: rgba(255, 90, 90, 0.9);
+  font-weight: 500;
+  margin-top: -2px;
+}
+
+/* ─────────────────────── Submit button ─────────────────────── */
+.submitBtn {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.25s, transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 20px rgba(47, 128, 255, 0.35);
+  margin-bottom: 16px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(47, 128, 255, 0.45);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitBtn:disabled,
+.submitting {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.secureNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ─────────────────────── Responsive ─────────────────────── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .info {
+    position: static;
+  }
+
+  .infoHeading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 5% 80px;
+  }
+
+  .form {
+    padding: 32px 24px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .infoHeading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 24px 20px;
+  }
+}

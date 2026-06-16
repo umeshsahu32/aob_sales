@@ -1,0 +1,119 @@
+.section {
+  padding: var(--section-padding);
+  background-color: #ffffff;
+}
+
+.headingWrap {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.sectionTitle {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0274b0;
+  margin-bottom: 0;
+}
+
+/* ── Subtext ── */
+.subtext {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto 48px;
+}
+
+/* ── Four-column grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Base card ── */
+.card {
+  background: #ffffff;
+  border: 1.5px solid #d1dce8;
+  border-radius: 16px;
+  padding: 24px 18px;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 61, 92, 0.09);
+}
+
+/* ── Active card (PROCESS) ── */
+.cardActive {
+  border: 1.5px solid #c3d9ec;
+  box-shadow: 0 6px 28px rgba(0, 109, 165, 0.13);
+}
+
+/* Blue gradient top bar on active card */
+.cardActive::before {
+  content: '';
+  position: absolute;
+  top: -1.5px;
+  left: 16px;
+  right: 16px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: linear-gradient(90deg, #003d5c, #006da5);
+}
+
+/* ── Icon ── */
+.iconWrap {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Titles ── */
+.cardTitle {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #003d5c;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #003d5c;
+  margin-bottom: 10px;
+  line-height: 1.35;
+
+}
+
+.desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.pillarIcon{
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,45 @@
+.section {
+  padding: 88px 5%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Decorative gray quote marks */
+.quoteMark {
+  font-size: 72px;
+  font-weight: 900;
+  color: #c8d0dc;
+  line-height: 1;
+  margin-bottom: -12px;
+  display: block;
+  font-family: Georgia, serif;
+  letter-spacing: -4px;
+}
+
+.quoteMark::before {
+  content: '';
+}
+
+/* Quote text */
+.quote {
+  font-size: clamp(20px, 2.6vw, 30px);
+  font-weight: 700;
+  font-style: italic;
+  color: #003d5c;
+  line-height: 1.55;
+  margin: 0 0 28px;
+  border: none;
+  padding: 0;
+}
+
+/* Attribution */
+.author {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0274b0;
+}

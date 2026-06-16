@@ -1,0 +1,9 @@
+export { default as Hero } from './hero/Hero';
+export { default as AobStory } from './aob-story/AobStory';
+export { default as OurPhilosophy } from './our-philosophy/OurPhilosophy';
+export { default as DecadeOfExecution } from './decade-of-execution/DecadeOfExecution';
+export { default as Transformation } from './transformation/Transformation';
+export { default as Milestones } from './milestones/Milestones';
+export { default as Ecosystem } from './ecosystem/Ecosystem';
+export { default as WhyAob } from './why-aob/WhyAob';
+export { default as FinalCta } from './final-cta/FinalCta';
