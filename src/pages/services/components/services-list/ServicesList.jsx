@@ -1,9 +1,10 @@
-import SectionHeading from '../../../../components/SectionHeading';
+import SectionHeading from '@/components/SectionHeading';
 import styles from './ServicesList.module.css';
-import aiAutomation from '../../../../assets/icons/services/AI_AUTONATION.png'
-import aiPoweredSales from '../../../../assets/icons/services/ai_powered_sales.png'
-import meetingGeneration from '../../../../assets/icons/services/Meeting_Generation_Systems.png'
-import RevenueGeneration from '../../../../assets/icons/services/Revenue_Operations.png'
+import aiAutomation from '@/assets/icons/services/AI_AUTONATION.png'
+import aiPoweredSales from '@/assets/icons/services/ai_powered_sales.png'
+import meetingGeneration from '@/assets/icons/services/Meeting_Generation_Systems.png'
+import RevenueGeneration from '@/assets/icons/services/Revenue_Operations.png'
+import HeroBadge from '@/components/HeroBadge';
 
 const services = [
   {
@@ -179,11 +180,15 @@ const ServicesList = () => {
   return (
     <section className={styles.section}>
       <div className="container">
+        <div className={styles.head}>
+
+        <HeroBadge text="Our Services"/>
         <SectionHeading
-          heading="Sales Systems Designed for Modern Businesses"
-          subheading="Our Services"
+          heading={<>Sales Systems Designed for <span>Modern Businesses</span></>}
           supportingText="Each service is engineered around your specific business targets, operational requirements, and scalability goals."
-        />
+          dark
+          />
+          </div>
 
         <div className={styles.list}>
           {services.map((service, i) => (

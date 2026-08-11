@@ -18,8 +18,8 @@ const Services = () => {
       <Hero />
       <OurApproach />
       <ServicesList />
-      <AobAdvantage />
       <Industries />
+      <AobAdvantage />
       <FinalCta />
     </>
   );

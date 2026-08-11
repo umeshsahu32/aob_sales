@@ -3,13 +3,19 @@
   background: #f0eeff;
 }
 
+.head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .alignmentRow {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
-  margin-top: 48px;
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 
 .alignChip {

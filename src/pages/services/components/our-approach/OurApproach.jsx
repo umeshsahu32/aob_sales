@@ -1,6 +1,7 @@
 import React from 'react';
-import SectionHeading from '../../../../components/SectionHeading';
+import SectionHeading from '@/components/SectionHeading';
 import styles from './OurApproach.module.css';
+import HeroBadge from '@/components/HeroBadge';
 
 const startsWith = [
   'Revenue objectives',
@@ -23,11 +24,10 @@ const OurApproach = () => {
     <section className={styles.section}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.left}>
+          <HeroBadge text="Our Approach"/>
           <SectionHeading
-            heading="We Start With Numbers"
-            subheading="Our Approach"
+            heading={<>We Start With <span>Numbers</span></>}
             centered={false}
-            dark
           />
           <p className={styles.body}>
             Every business wants growth. But sustainable growth only happens when sales becomes

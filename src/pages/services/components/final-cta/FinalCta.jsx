@@ -1,11 +1,12 @@
-import Button from '../../../../components/Button';
+import Button from '@/components/Button';
 import styles from './FinalCta.module.css';
+import HeroBadge from '@/components/HeroBadge';
 
 const FinalCta = () => {
   return (
     <section className={styles.section}>
       <div className={`container ${styles.inner}`}>
-        <span className={styles.label}>Get Started</span>
+      <HeroBadge text="Get Started"/>
         <h2 className={styles.heading}>Build a Sales System That Scales</h2>
         <p className={styles.body}>
           Whether you are building a sales function, improving operational efficiency, or

@@ -1,13 +1,14 @@
-import SectionHeading from '../../../../components/SectionHeading';
+import SectionHeading from '@/components/SectionHeading';
 import styles from './Industries.module.css';
-import realEstate from "../../../../assets/images/Services/Realestate.webp"
-import edTech from "../../../../assets/images/Services/Edtech.webp"
-import manufacturing from "../../../../assets/images/Services/Manufacturing.webp"
-import healthcare from "../../../../assets/images/Services/healthcare.webp"
-import financialServices from "../../../../assets/images/Services/financial_services.webp"
-import b2bServices from "../../../../assets/images/Services/B2B_service.webp"
-import d2cBrands from "../../../../assets/images/Services/D2C_Brands.webp"
-import professionalServices from "../../../../assets/images/Services/professional_services.webp"
+import realEstate from "@/assets/images/Services/Realestate.webp"
+import edTech from "@/assets/images/Services/Edtech.webp"
+import manufacturing from "@/assets/images/Services/Manufacturing.webp"
+import healthcare from "@/assets/images/Services/healthcare.webp"
+import financialServices from "@/assets/images/Services/financial_services.webp"
+import b2bServices from "@/assets/images/Services/B2B_service.webp"
+import d2cBrands from "@/assets/images/Services/D2C_Brands.webp"
+import professionalServices from "@/assets/images/Services/professional_services.webp"
+import HeroBadge from '@/components/HeroBadge';
 
 const industries = [
   { icon: realEstate, name: 'Real Estate' },
@@ -31,11 +32,14 @@ const Industries = () => {
   return (
     <section className={styles.section}>
       <div className="container">
+        <div className={styles.head}>
+
+        <HeroBadge text="Industries We Support"/>
         <SectionHeading
-          heading="Sales Systems Across Industries"
-          subheading="Industries We Support"
+          heading={<>Sales Systems Across <span>Industries</span></>}
           supportingText="Every industry operates differently. That is why AOB India designs customised revenue systems aligned to each sector's unique dynamics."
-        />
+          />
+          </div>
 
         <div className={styles.alignmentRow}>
           {alignmentPoints.map((pt) => (
