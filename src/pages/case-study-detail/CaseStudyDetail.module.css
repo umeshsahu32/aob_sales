@@ -1,5 +1,6 @@
 ﻿.page {
   min-height: 100vh;
+  background: #0d0a36;
 }
 
 /* ── Back bar ── */
@@ -13,20 +14,20 @@
   gap: 6px;
   font-size: 14px;
   font-weight: 600;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.25s;
   padding: 8px 0;
 }
 
 .back:hover {
-  color: #6842e1;
+  color: #a794f5;
 }
 
 /* ── Hero ── */
 .hero {
   padding: 40px 5% 0;
-  background: #ffffff;
+  background: #0d0a36;
 }
 
 .heroCont {
@@ -71,7 +72,7 @@
 .heroCompany {
   font-size: clamp(44px, 7vw, 80px);
   font-weight: 900;
-  color: #0d0a36;
+  color: #ffffff;
   line-height: 1.05;
   margin-bottom: 18px;
   letter-spacing: -0.03em;
@@ -79,7 +80,7 @@
 
 .heroTagline {
   font-size: clamp(15px, 2vw, 19px);
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.65;
   max-width: 660px;
   margin: 0 auto;
@@ -94,8 +95,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: #e2e8f0;
-  border: 1.5px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -132,7 +133,7 @@
 .sectionTitle {
   font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 800;
-  color: #0d0a36;
+  color: #ffffff;
   margin-bottom: 32px;
   padding-left: 16px;
   border-left: 3px solid #6842e1;
@@ -143,7 +144,7 @@
 .challengeIntro {
   font-size: 18px;
   font-weight: 600;
-  color: #0d0a36;
+  color: #ffffff;
   margin-bottom: 10px;
   line-height: 1.55;
 }
@@ -159,7 +160,7 @@
   font-size: 21px;
   font-style: italic;
   font-weight: 700;
-  color: #6842e1;
+  color: #a794f5;
 }
 
 .challengeGrid {
@@ -208,7 +209,7 @@
 /* ── Intervention ── */
 .interventionSection {
   padding: 0 5% 72px;
-  background: #f0eeff;
+  background: #0d0a36;
   padding-top: 40px;
 }
 
@@ -409,13 +410,13 @@
 
 .transformIntro {
   font-size: 16px;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 28px;
   line-height: 1.65;
 }
 
 .transformGrid {
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -425,7 +426,7 @@
   grid-template-columns: 1fr 48px 1fr;
   align-items: center;
   padding: 18px 24px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background 0.2s ease;
 }
 
@@ -434,32 +435,32 @@
 }
 
 .transformRow:hover {
-  background: rgba(157, 42, 174, 0.03);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .transformFrom {
   font-size: 15px;
   font-weight: 600;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .transformArrow {
   font-size: 18px;
-  color: #6842e1;
+  color: #a794f5;
   text-align: center;
 }
 
 .transformTo {
   font-size: 15px;
   font-weight: 700;
-  color: #0d0a36;
+  color: #ffffff;
 }
 
 /* ── Closing ── */
 .closingSection {
   padding: 60px 5% 100px;
   text-align: center;
-  background: #f0eeff;
+  background: #0d0a36;
 }
 
 .closingQuote {

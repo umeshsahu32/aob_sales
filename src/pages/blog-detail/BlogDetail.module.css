@@ -1,5 +1,6 @@
 ﻿.page {
   min-height: 100vh;
+  background: #0d0a36;
 }
 
 /* ── Back bar ── */
@@ -13,14 +14,14 @@
   gap: 6px;
   font-size: 14px;
   font-weight: 600;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.25s;
   padding: 8px 0;
 }
 
 .back:hover {
-  color: #6842e1;
+  color: #a794f5;
 }
 
 /* ── State / loading ── */
@@ -34,14 +35,14 @@
 }
 
 .state {
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
 }
 
 /* ── Hero ── */
 .hero {
   padding: 36px 5% 36px;
-  background: #f0eeff;
+  background: #0d0a36;
 }
 
 .heroCont {
@@ -56,9 +57,9 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #6842e1;
-  background: #ede8fb;
-  border: 1px solid #c5b5f5;
+  color: #a794f5;
+  background: rgba(168, 148, 245, 0.12);
+  border: 1px solid rgba(168, 148, 245, 0.3);
   padding: 4px 14px;
   border-radius: 20px;
   margin-bottom: 18px;
@@ -68,7 +69,7 @@
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 800;
   line-height: 1.25;
-  color: #0d0a36;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -78,16 +79,16 @@
   justify-content: center;
   gap: 10px;
   font-size: 14px;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .dot {
-  color: #e2e8f0;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .author {
   font-weight: 600;
-  color: #6842e1;
+  color: #a794f5;
 }
 
 /* ── Featured image ── */
@@ -101,7 +102,7 @@
   max-height: 460px;
   object-fit: cover;
   border-radius: 16px;
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   display: block;
 }
 
@@ -118,14 +119,14 @@
 .para {
   font-size: 16px;
   line-height: 1.85;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 20px;
 }
 
 .h2 {
   font-size: 22px;
   font-weight: 700;
-  color: var(--color-heading);
+  color: #ffffff;
   margin: 40px 0 14px;
   padding-left: 14px;
   border-left: 3px solid #6842e1;
@@ -135,7 +136,7 @@
 .h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #0d0a36;
+  color: #ffffff;
   margin: 28px 0 10px;
 }
 
@@ -153,7 +154,7 @@
   padding-left: 22px;
   font-size: 15px;
   line-height: 1.75;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .li::before {
@@ -171,7 +172,7 @@
   margin: 32px 0;
   border-radius: 12px;
   overflow: hidden;
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
 }
 
 .inlineImage img {
@@ -182,13 +183,13 @@
 /* ── Related articles ── */
 .related {
   padding: 60px 5% 100px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .relatedTitle {
   font-size: 24px;
   font-weight: 700;
-  color: #0d0a36;
+  color: #ffffff;
   margin-bottom: 28px;
 }
 

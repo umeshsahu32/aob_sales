@@ -1,6 +1,6 @@
 ﻿.section {
   padding: 60px 5% 120px;
-  background: #ffffff;
+  background: #0d0a36;
 }
 
 .grid {
@@ -20,14 +20,14 @@
   font-size: 44px;
   font-weight: 700;
   font-family: 'Inter Tight', sans-serif;
-  color: #0d0a36;
+  color: #ffffff;
   line-height: 1.15;
   margin: 0 0 20px;
 }
 
 .infoBody {
   font-size: 15px;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
   margin: 0 0 40px;
 }

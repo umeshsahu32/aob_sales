@@ -1,5 +1,6 @@
 ﻿.page {
   min-height: 100vh;
+  background: #0d0a36;
 }
 
 /* ── Hero ── */
@@ -62,14 +63,14 @@
 /* ── Tabs ── */
 .tabSection {
   padding: 0 5% 36px;
-  background: #ffffff;
+  background: #0d0a36;
   margin-top: 20px;
 }
 
 .tabRow {
   display: flex;
   gap: 4px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .tabBtn {
@@ -81,7 +82,7 @@
   border: none;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -90,17 +91,17 @@
 }
 
 .tabBtn:hover {
-  color: #0d0a36;
+  color: #ffffff;
 }
 
 .tabBtn.tabActive {
-  color: #6842e1;
-  border-bottom-color: #6842e1;
+  color: #a794f5;
+  border-bottom-color: #a794f5;
 }
 
 .tabCount {
-  background: #f0eeff;
-  color: #5a6a7a;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   padding: 1px 8px;
   font-size: 12px;
@@ -108,14 +109,14 @@
 }
 
 .tabBtn.tabActive .tabCount {
-  background: #ede8fb;
-  color: #6842e1;
+  background: rgba(168, 148, 245, 0.2);
+  color: #c5b5f5;
 }
 
 /* ── Blog Filter ── */
 .filterSection {
   padding: 0 5% 40px;
-  background: #ffffff;
+  background: #0d0a36;
 }
 
 .filterRow {
@@ -130,9 +131,9 @@
   gap: 8px;
   padding: 8px 20px;
   border-radius: 30px;
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   background: transparent;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -142,7 +143,7 @@
 
 .filterBtn:hover {
   border-color: #c5b5f5;
-  color: #0d0a36;
+  color: #ffffff;
 }
 
 .filterBtn.active {
@@ -160,20 +161,20 @@
 }
 
 .filterBtn:not(.active) .count {
-  background: #f0eeff;
-  color: #5a6a7a;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ── Blog Grid ── */
 .gridSection {
   padding: 0 5% 100px;
-  background: #ffffff;
+  background: #0d0a36;
 }
 
 .state {
   text-align: center;
   padding: 60px 0;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
 }
 
@@ -297,7 +298,7 @@
 
 .mediaSection {
   padding: 0 5% 100px;
-  background: #ffffff;
+  background: #0d0a36;
 }
 
 /* ── Featured article ── */
@@ -401,7 +402,7 @@
   content: '';
   flex: 1;
   height: 1px;
-  background: #e2e8f0;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .mediaDividerLabel {
@@ -409,7 +410,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.6);
   white-space: nowrap;
 }
 
