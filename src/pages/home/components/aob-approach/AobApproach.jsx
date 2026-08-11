@@ -1,4 +1,4 @@
-import funnelImage from "../../../../assets/images/Home page/funnel-cropped.png";
+import funnelImage from "@/assets/images/Home page/funnel-cropped.png";
 import styles from "./AobApproach.module.css";
 
 const features = [

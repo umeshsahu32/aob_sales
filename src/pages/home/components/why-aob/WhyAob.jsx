@@ -1,10 +1,10 @@
 import styles from './WhyAob.module.css';
-import numberDriven from '../../../../assets/icons/home/number_driven_execution_1.png'
-import playAndPlug from '../../../../assets/icons/home/plug_and_play_1.png'
-import ai_balance from '../../../../assets/icons/home/ai_human_balance_1.png'
-import end_to_end_ownership from '../../../../assets/icons/home/end_to_end_ownership_1.png'
-import ROI from '../../../../assets/icons/home/ROI_1.png'
-import experience from '../../../../assets/icons/home/12-yrs-exp_1.png'
+import numberDriven from '@/assets/icons/home/number_driven_execution_1.png'
+import playAndPlug from '@/assets/icons/home/plug_and_play_1.png'
+import ai_balance from '@/assets/icons/home/ai_human_balance_1.png'
+import end_to_end_ownership from '@/assets/icons/home/end_to_end_ownership_1.png'
+import ROI from '@/assets/icons/home/ROI_1.png'
+import experience from '@/assets/icons/home/12-yrs-exp_1.png'
 
 const reasons = [
   {

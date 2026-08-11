@@ -1,12 +1,12 @@
 import styles from "./Industries.module.css";
-import realEstate from "../../../../assets/images/Home page/Realestate.webp";
-import edTech from "../../../../assets/images/Home page/Edtech.webp";
-import manufacturing from "../../../../assets/images/Home page/Manufacturing.webp";
-import healthcare from "../../../../assets/images/Home page/healthcare.webp";
-import financialServices from "../../../../assets/images/Home page/financial services.webp";
-import b2bServices from "../../../../assets/images/Home page/B2B service.webp";
-import d2cBrands from "../../../../assets/images/Home page/D2C Brands.webp";
-import professionalServices from "../../../../assets/images/Home page/professional services.webp";
+import realEstate from "@/assets/images/Home page/Realestate.webp";
+import edTech from "@/assets/images/Home page/Edtech.webp";
+import manufacturing from "@/assets/images/Home page/Manufacturing.webp";
+import healthcare from "@/assets/images/Home page/healthcare.webp";
+import financialServices from "@/assets/images/Home page/financial services.webp";
+import b2bServices from "@/assets/images/Home page/B2B service.webp";
+import d2cBrands from "@/assets/images/Home page/D2C Brands.webp";
+import professionalServices from "@/assets/images/Home page/professional services.webp";
 
 const industries = [
   {

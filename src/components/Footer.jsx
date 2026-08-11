@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Footer.module.css";
-import logo from '../assets/icons/home/aob_logo.png'
+import logo from '@/assets/icons/home/aob_logo.png'
 
 const LinkedInIcon = () => (
   <svg

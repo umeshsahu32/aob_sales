@@ -203,7 +203,7 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1.5fr 1fr 1.4fr 1fr;
     gap: 32px;
@@ -231,7 +231,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 624px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 24px;

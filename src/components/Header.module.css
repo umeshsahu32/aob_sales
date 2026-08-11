@@ -139,7 +139,7 @@
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius-sm);
   cursor: pointer;
   padding: 0;
@@ -155,7 +155,7 @@
   display: block;
   width: 20px;
   height: 2px;
-  background-color: var(--text-primary);
+  background-color: #ffffff;
   border-radius: 2px;
   transition:
     transform 0.3s ease,
@@ -276,12 +276,34 @@
   padding-left: 9px !important;
 }
 
+/* ── Drawer CTA (mobile) ── */
+.drawerCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #6842e1 0%, #9d2aae 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  box-shadow: 0 4px 14px rgba(104, 66, 225, 0.3);
+}
+
 @media (max-width: 1024px) {
   .links {
     display: none;
   }
+  .ctaBtn {
+    display: none;
+  }
   .hamburger {
     display: inline-flex;
+  }
+  .nav {
+    gap: 16px;
   }
 }
 

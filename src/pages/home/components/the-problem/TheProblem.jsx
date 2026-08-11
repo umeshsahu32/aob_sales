@@ -1,7 +1,7 @@
 import styles from "./TheProblem.module.css";
-import icon1 from "../../../../assets/icons/home/marketing_1.png";
-import icon2 from "../../../../assets/icons/home/people_1.png";
-import icon3 from "../../../../assets/icons/home/Operations_1.png";
+import icon1 from "@/assets/icons/home/marketing_1.png";
+import icon2 from "@/assets/icons/home/people_1.png";
+import icon3 from "@/assets/icons/home/Operations_1.png";
 
 const columns = [
   { title: "Marketing", sub: "Works in a silo", icon: icon1 },

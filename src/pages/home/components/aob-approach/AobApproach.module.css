@@ -103,18 +103,40 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .body {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .featureGrid {
     grid-template-columns: 1fr 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featureItem {
+    justify-content: flex-start;
+  }
+
+  .tagline {
+    display: inline-block;
+    text-align: left;
   }
 
   .funnelImg {
-    max-width: 380px;
+    max-width: 400px;
   }
 }
 
@@ -124,7 +146,7 @@
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 624px) {
   .section {
     padding: 56px 5%;
   }
@@ -136,6 +158,7 @@
   .featureGrid {
     grid-template-columns: 1fr;
     gap: 10px;
+    max-width: 280px;
   }
 
   .funnelImg {

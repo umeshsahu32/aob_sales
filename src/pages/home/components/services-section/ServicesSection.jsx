@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./ServicesSection.module.css";
-import realEstate from "../../../../assets/images/Services/Realestate.webp";
-import edTech from "../../../../assets/images/Services/Edtech.webp";
-import manufacturing from "../../../../assets/images/Services/Manufacturing.webp";
-import healthcare from "../../../../assets/images/Services/healthcare.webp";
+import realEstate from "@/assets/images/Services/Realestate.webp";
+import edTech from "@/assets/images/Services/Edtech.webp";
+import manufacturing from "@/assets/images/Services/Manufacturing.webp";
+import healthcare from "@/assets/images/Services/healthcare.webp";
 
 const services = [
   {

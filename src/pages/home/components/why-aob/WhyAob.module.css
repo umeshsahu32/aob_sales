@@ -116,36 +116,32 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .block:nth-child(3n) {
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding-right: 40px;
-  }
-
-  .block:nth-child(2n) {
-    border-right: none;
-    padding-right: 0;
-  }
-
-  .block:nth-child(2n+1) {
+  /* Column 1 (odd items): divider on the right */
+  .block:nth-child(odd) {
     padding-left: 0;
+    padding-right: 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Column 2 (even items): left padding to align, no divider */
+  .block:nth-child(even) {
+    padding-left: 40px;
+    padding-right: 0;
+    border-right: none;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 624px) {
   .grid {
     grid-template-columns: 1fr;
   }
 
-  .block,
-  .block:nth-child(3n),
-  .block:nth-child(3n+2),
-  .block:nth-child(3n+3),
-  .block:nth-child(2n) {
+  .grid > .block {
     border-right: none;
     padding-left: 0;
     padding-right: 0;
@@ -153,17 +149,13 @@
     padding-bottom: 28px;
   }
 
-  .block:last-child {
+  .grid > .block:last-child {
     border-bottom: none;
   }
 }
 
 @media (max-width: 420px) {
-  .block,
-  .block:nth-child(3n),
-  .block:nth-child(3n+2),
-  .block:nth-child(3n+3),
-  .block:nth-child(2n) {
+  .grid > .block {
     padding-bottom: 20px;
   }
 

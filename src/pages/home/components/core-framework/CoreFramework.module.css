@@ -117,14 +117,21 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .headingWrap {
+    margin-bottom: 40px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 624px) {
   .grid {
     grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

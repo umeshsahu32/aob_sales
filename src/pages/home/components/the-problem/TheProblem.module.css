@@ -39,10 +39,11 @@
 /* ── Three cards ── */
 .columns {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 32px;
-  max-width: 760px;
+  gap: 24px;
+  max-width: 860px;
   margin: 0 auto 52px;
 }
 
@@ -55,7 +56,8 @@
   border: 1.5px solid #e2e8f0;
   background: var(--color-white);
   transition: box-shadow 0.2s;
-  min-width: 280px;
+  flex: 1 1 210px;
+  min-width: 0;
 }
 
 .col img{
@@ -68,6 +70,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   gap: 0;
 }
 
@@ -120,14 +123,47 @@
   font-style: normal;
 }
 
-@media (max-width: 600px) {
+/* Tablet: keep 3 tiles in a row, stacked as compact vertical cards */
+@media (max-width: 768px) {
+  .columns {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .col {
+    flex: 1 1 0;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 20px 12px;
+  }
+  .colText {
+    align-items: center;
+  }
+  .col img {
+    width: 44px;
+  }
+  .subtext br {
+    display: none;
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 624px) {
   .columns {
     flex-direction: column;
     align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
   }
   .col {
     width: 100%;
     max-width: 320px;
+    flex: none;
+  }
+  .subtext {
+    margin-bottom: 36px;
   }
 }
 

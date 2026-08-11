@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
 
 import styles from './Header.module.css';
-import logo from '../assets/icons/home/aob_logo_white.png'
+import logo from '@/assets/icons/home/aob_logo_white.png'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
@@ -122,6 +122,9 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
+              <Link to="/contact-us" className={styles.drawerCta} onClick={close}>
+                Book Strategy Call
+              </Link>
             </aside>
           </>,
           document.body

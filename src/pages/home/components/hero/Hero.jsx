@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import bannerGraph from '../../../../assets/images/Home page/home-banner.png';
+import bannerGraph from '@/assets/images/Home page/home-banner.png';
 import styles from './Hero.module.css';
 
 const Hero = () => {

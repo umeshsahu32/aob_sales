@@ -1,8 +1,8 @@
 import styles from "./CoreFramework.module.css";
-import ai from "../../../../assets/icons/home/AI_AUTOMATION_1.png";
-import technology from "../../../../assets/icons/home/technology_1.png";
-import process from "../../../../assets/icons/home/process_1.png";
-import people from "../../../../assets/icons/home/people_1.png";
+import ai from "@/assets/icons/home/AI_AUTOMATION_1.png";
+import technology from "@/assets/icons/home/technology_1.png";
+import process from "@/assets/icons/home/process_1.png";
+import people from "@/assets/icons/home/people_1.png";
 
 const pillars = [
   {

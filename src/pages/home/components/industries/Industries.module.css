@@ -55,7 +55,7 @@
 /* ── Image ── */
 .imgWrap {
   width: 100%;
-  aspect-ratio: square;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   display: block;
 }
@@ -95,18 +95,25 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-  }
-  .cardName {
-    font-size: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 624px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .cardName {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .grid {
+    gap: 8px;
   }
 }
