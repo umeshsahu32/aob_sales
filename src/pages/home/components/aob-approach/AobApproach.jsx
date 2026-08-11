@@ -1,4 +1,4 @@
-import funnelImage from "../../../../assets/images/Home page/funnel-image.webp";
+import funnelImage from "../../../../assets/images/Home page/funnel-without-bg.png";
 import styles from "./AobApproach.module.css";
 
 const features = [

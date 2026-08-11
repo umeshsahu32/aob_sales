@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./ServicesSection.module.css";
-// import sales from '../../../../assets/icons/home/sales_outsource.png'
-// import ai from '../../../../assets/icons/home/Ai.png'
-// import revenue from '../../../../assets/icons/home/Revenue_Operations.png'
-// import meetings from '../../../../assets/icons/home/Meeting_Generation_Systems.png'
 import realEstate from "../../../../assets/images/Services/Realestate.webp";
 import edTech from "../../../../assets/images/Services/Edtech.webp";
 import manufacturing from "../../../../assets/images/Services/Manufacturing.webp";

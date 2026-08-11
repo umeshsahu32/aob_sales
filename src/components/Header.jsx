@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
 
 import styles from './Header.module.css';
-import logo from '../assets/icons/home/aob_logo.png'
+import logo from '../assets/icons/home/aob_logo_white.png'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },

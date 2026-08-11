@@ -29,7 +29,7 @@
 }
 
 .reasonsIcons {
-  width: 24px;
+  width: 32px;
   height: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
