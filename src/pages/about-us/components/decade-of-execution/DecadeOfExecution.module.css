@@ -1,6 +1,6 @@
-.section {
+﻿.section {
   padding: var(--section-padding);
-  background: var(--bg-secondary);
+  background: #f0eeff;
 }
 
 .statsGrid {
@@ -12,8 +12,8 @@
 }
 
 .statCard {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   border-radius: 16px;
   padding: 36px 24px;
   text-align: center;
@@ -28,16 +28,16 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+  height: 3px;
+  background: linear-gradient(90deg, #6842e1, #9d2aae);
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .statCard:hover {
-  border-color: rgba(47, 128, 255, 0.4);
+  border-color: #c5b5f5;
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(47, 128, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(157, 42, 174, 0.1);
 }
 
 .statCard:hover::before {
@@ -48,7 +48,7 @@
   font-size: 48px;
   font-weight: 800;
   font-family: 'Inter Tight', sans-serif;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  background: linear-gradient(135deg, #6842e1, #9d2aae);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -59,14 +59,14 @@
 .statLabel {
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #0d0a36;
   margin-bottom: 8px;
   font-family: 'Inter Tight', sans-serif;
 }
 
 .statSub {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: #5a6a7a;
   line-height: 1.5;
 }
 
@@ -75,11 +75,11 @@
 }
 
 .industriesHeading {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: #6842e1;
   margin-bottom: 24px;
 }
 
@@ -93,24 +93,22 @@
 .industryTag {
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-primary);
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  color: #0d0a36;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   padding: 8px 20px;
   border-radius: 24px;
   transition: border-color 0.3s, color 0.3s, background 0.3s;
 }
 
 .industryTag:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-cyan);
-  background: rgba(47, 128, 255, 0.08);
+  border-color: #c5b5f5;
+  color: #6842e1;
+  background: #ede8fb;
 }
 
 @media (max-width: 1024px) {
-  .statsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
@@ -119,7 +117,5 @@
     gap: 16px;
   }
 
-  .statNumber {
-    font-size: 36px;
-  }
+  .statNumber { font-size: 36px; }
 }

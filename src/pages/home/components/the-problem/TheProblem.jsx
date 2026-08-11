@@ -1,27 +1,39 @@
-import styles from './TheProblem.module.css';
+import styles from "./TheProblem.module.css";
+import icon1 from "../../../../assets/icons/home/ROI.png";
+import icon2 from "../../../../assets/icons/home/people.png";
+import icon3 from "../../../../assets/icons/home/Ai.png";
 
 const columns = [
-  { title: 'Marketing', sub: 'Works in a silo' },
-  { title: 'Sales', sub: 'Unstructured processes' },
-  { title: 'Operations', sub: 'Founders trapped' },
+  { title: "Marketing", sub: "Works in a silo", icon: icon1 },
+  { title: "Sales", sub: "Unstructured processes", icon: icon2 },
+  { title: "Operations", sub: "Founders trapped", icon: icon3 },
 ];
 
 const TheProblem = () => {
   return (
     <section className={styles.section}>
       <div className="container">
-        <span className={styles.label}>BUSINESSES DON'T HAVE A REVENUE PROBLEM </span>
+        <span className={styles.label}>
+          BUSINESSES DON'T HAVE A REVENUE PROBLEM{" "}
+        </span>
         <h2 className={styles.headline}>They Don't Have a Sales Engine</h2>
         <p className={styles.subtext}>
-          Most businesses struggle not because of lack of effort, but because<br />
+          Most businesses struggle not because of lack of effort, but because
+          <br />
           their sales ecosystem is disconnected.
         </p>
 
         <div className={styles.columns}>
           {columns.map((col, i) => (
-            <div key={col.title} className={`${styles.col} ${i === 1 ? styles.colActive : ''}`}>
-              <div className={styles.colTitle}>{col.title}</div>
-              <div className={styles.colSub}>{col.sub}</div>
+            <div
+              key={col.title}
+              className={`${styles.col} ${i === 1 ? styles.colActive : ""}`}
+            >
+              <img src={col.icon} alt={col.title} />
+              <div className={styles.colText}>
+                <div className={styles.colTitle}>{col.title}</div>
+                <div className={styles.colSub}>{col.sub}</div>
+              </div>
             </div>
           ))}
         </div>

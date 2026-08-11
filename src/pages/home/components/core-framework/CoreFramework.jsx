@@ -37,7 +37,7 @@ const CoreFramework = () => {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.headingWrap}>
-          <h2 className={styles.sectionTitle}>Built on Four Pillars</h2>
+          <h2 className={styles.sectionTitle}>Built on <span>Four Pillars</span></h2>
           <p className={styles.subtext}>
             Explore our sales outsourcing services
           </p>
@@ -49,7 +49,7 @@ const CoreFramework = () => {
               key={p.title}
               className={`${styles.card} ${p.active ? styles.cardActive : ""}`}
             >
-              <img src={p.Icon} className={styles.pillarIcon}/>
+              <img src={p.Icon} className={styles.pillarIcon} alt={p.subtitle} />
               <div className={styles.cardTitle}>{p.title}</div>
               <div className={styles.subtitle}>{p.subtitle}</div>
               <p className={styles.desc}>{p.desc}</p>

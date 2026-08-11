@@ -1,8 +1,7 @@
-.header {
+﻿.header {
   background-color: var(--bg-header);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -15,6 +14,10 @@
   align-items: center;
   height: 68px;
   gap: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
 }
 
 .logo {
@@ -29,6 +32,12 @@
   letter-spacing: -0.03em;
 }
 
+.logo img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
 .logoMark {
   width: 36px;
   height: 36px;
@@ -39,7 +48,7 @@
   justify-content: center;
   font-size: 14px;
   font-weight: 900;
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: 0;
   flex-shrink: 0;
 }
@@ -54,36 +63,72 @@
 }
 
 .navLink {
-  color: var(--text-secondary);
+  color: var(--color-white);
   font-size: 14px;
   font-weight: 600;
   padding: 8px 14px;
   border-radius: var(--radius-sm);
-  transition: color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s;
 }
 
 .navLink:hover {
-  color: #0274b0;
-  background: #e8f3fb;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 1px solid (--gradient-primary);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .activeLink {
-  color: #0274b0 !important;
-  background: #ddeef8 !important;
-  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   position: relative;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-/* .activeLink::after {
-  content: '';
+.activeLink::after {
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 14px;
   right: 14px;
   height: 2px;
   border-radius: 2px 2px 0 0;
-  background: linear-gradient(90deg, #003d5c, #006da5);
-} */
+  background: linear-gradient(90deg, #6842e1, #9d2aae);
+}
+
+/* ── Header CTA button ── */
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #6842e1 0%, #9d2aae 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  font-family: var(--font-body);
+  box-shadow: 0 4px 14px rgba(104, 66, 225, 0.3);
+  transition:
+    opacity 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.ctaBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(104, 66, 225, 0.45);
+}
 
 /* Hamburger — hidden on desktop */
 .hamburger {
@@ -112,12 +157,20 @@
   height: 2px;
   background-color: var(--text-primary);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.2s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease;
 }
 
-.barTop { transform: translateY(7px) rotate(45deg); }
-.barMid { opacity: 0; }
-.barBot { transform: translateY(-7px) rotate(-45deg); }
+.barTop {
+  transform: translateY(7px) rotate(45deg);
+}
+.barMid {
+  opacity: 0;
+}
+.barBot {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 .overlay {
   position: fixed;
@@ -144,13 +197,21 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
-  from { transform: translateX(100%); }
-  to   { transform: translateX(0); }
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .drawerHeader {
@@ -197,27 +258,49 @@
   color: var(--text-primary);
   font-size: 16px;
   font-weight: 600;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .drawerLinks a:hover {
-  background: #e8f3fb;
-  color: #0274b0;
+  background: #ece8fb;
+  color: #6842e1;
 }
 
 .drawerActiveLink {
-  background: #ddeef8 !important;
-  color: #0274b0 !important;
+  background: #ede8fb !important;
+  color: #6842e1 !important;
   font-weight: 700 !important;
-  border-left: 3px solid #006da5;
+  border-left: 3px solid #9d2aae;
   padding-left: 9px !important;
 }
 
 @media (max-width: 1024px) {
-  .links { display: none; }
-  .hamburger { display: inline-flex; }
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: inline-flex;
+  }
 }
 
 @media (max-width: 480px) {
-  .logo { font-size: 20px; }
+  .logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding: 0 4%;
+  }
+
+  .nav {
+    height: 60px;
+  }
+
+  .logo img {
+    width: 68px;
+  }
 }

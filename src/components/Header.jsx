@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
+
 import styles from './Header.module.css';
+import logo from '../assets/icons/home/aob_logo.png'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
@@ -40,8 +42,7 @@ const Header = () => {
       <header className={styles.header}>
         <div className={`container ${styles.nav}`}>
           <Link to="/" className={styles.logo} onClick={close}>
-            <div className={styles.logoMark}>A</div>
-            AOB <span>India</span>
+               <img src={logo}/>
           </Link>
 
           <ul className={styles.links}>
@@ -59,6 +60,10 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
+          <Link to="/contact-us" className={styles.ctaBtn}>
+            Book Strategy Call
+          </Link>
 
           <button
             type="button"

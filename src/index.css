@@ -1,34 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@600;700;800;900&display=swap');
+﻿:root {
+  /* ── Backgrounds ── */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0eeff;
+  --bg-section-alt: #f0eeff;
+  --bg-header: #0d0a36;
+  --color-white: #ffffff;
+  --color-secondary-bg: #f5f4fa;
 
-:root {
-  /* Light Theme — Default (matches PDF design) */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F0F4FF;
-  --bg-section-alt: #EEF2FB;
-  --bg-header: rgba(255, 255, 255, 0.95);
-  --accent-blue: #1D4ED8;
-  --accent-blue-hover: #1E40AF;
-  --accent-blue-light: #EFF6FF;
-  --accent-blue-mid: #3B82F6;
-  --accent-cyan: #0EA5E9;
-  --accent-purple: #7C3AED;
-  --text-primary: #0F172A;
-  --text-secondary: #64748B;
-  --text-muted: #94A3B8;
-  --border-color: #E2E8F0;
-  --border-blue: #BFDBFE;
-  --card-bg: #FFFFFF;
-  --card-bg-hover: #F8FAFF;
+  /* ── AOB Brand Colors (single source of truth) ── */
+  --color-dark-blue: #0d0a36;
+  --color-purple: #9d2aae;
+  --color-heading: #6842e1;
+  --color-dark: #0c1122;
+  --gradient-primary: linear-gradient(135deg, #6842e1 0%, #9d2aae 100%);
+
+  /* ── Accent aliases (mapped to AOB palette) ── */
+  --accent-blue: #6842e1;
+  --accent-blue-hover: #9d2aae;
+  --accent-blue-light: #ede8fb;
+  --accent-blue-mid: #9d2aae;
+  --accent-cyan: #6842e1;
+
+  /* ── Text ── */
+  --text-primary: #0f172a;
+  --text-secondary: #5a6a7a;
+  --text-muted: #94a3b8;
+
+  /* ── Borders & Cards ── */
+  --border-color: #e2e8f0;
+  --border-blue: #c5b5f5;
+  --card-bg: #ffffff;
+  --card-bg-hover: #f8fafc;
+
+  /* ── Shadows ── */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.06);
-  --shadow-blue: 0 4px 20px rgba(29, 78, 216, 0.15);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-blue: 0 4px 20px rgba(157, 42, 174, 0.15);
 
-  /* Typography */
-  --font-heading: 'Inter Tight', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* ── Typography ── */
+  --font-heading: "Inter Tight", sans-serif;
+  --font-body: "Inter", sans-serif;
 
-  /* Spacing & Layout */
+  /* ── Spacing & Layout ── */
   --section-padding: 90px 5%;
   --container-width: 1180px;
   --radius-sm: 8px;
@@ -37,27 +51,28 @@
   --radius-xl: 24px;
 }
 
-[data-theme='dark'] {
-  --bg-primary: #060B14;
-  --bg-secondary: #0E1624;
-  --bg-section-alt: #0A1220;
-  --bg-header: rgba(6, 11, 20, 0.92);
-  --accent-blue: #3B82F6;
-  --accent-blue-hover: #2563EB;
-  --accent-blue-light: rgba(59, 130, 246, 0.1);
-  --accent-blue-mid: #60A5FA;
-  --accent-cyan: #00D1FF;
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
-  --border-color: #1E2A3D;
-  --border-blue: #1E3A5F;
-  --card-bg: rgba(14, 22, 36, 0.6);
-  --card-bg-hover: rgba(14, 22, 36, 0.9);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
-  --shadow-blue: 0 4px 20px rgba(59, 130, 246, 0.2);
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 72px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 5%;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --section-padding: 52px 4%;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --section-padding: 44px 4%;
+  }
 }
 
 * {
@@ -68,14 +83,19 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-primary);
+  background-color: #f5f4fa;
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   line-height: 1.15;
   color: var(--text-primary);
@@ -95,15 +115,16 @@ img {
   max-width: 100%;
 }
 
-/* Global Utilities */
+/* ── Global Utilities ── */
 .container {
-  max-width: var(--container-width);
+  width: min(1200px, 100%);
   margin: 0 auto;
-  padding: 0 24px;
+  padding-inline: 20px;
 }
 
+/* AOB brand gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-mid));
+  background: linear-gradient(135deg, #6842e1, #9d2aae);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -128,14 +149,14 @@ main {
   color: var(--text-secondary);
 }
 
-/* Shared badge label */
+/* ── Shared section badge ── */
 .section-badge {
   display: inline-block;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-blue);
+  color: var(--color-heading);
   background: var(--accent-blue-light);
   border: 1px solid var(--border-blue);
   padding: 5px 14px;

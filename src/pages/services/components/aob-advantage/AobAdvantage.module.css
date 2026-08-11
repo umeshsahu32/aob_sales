@@ -1,6 +1,6 @@
-.section {
+﻿.section {
   padding: 100px 5%;
-  background: var(--bg-secondary);
+  background: #0d0a36;
 }
 
 .grid {
@@ -11,8 +11,8 @@
 }
 
 .card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   border-radius: 16px;
   padding: 36px 32px;
   position: relative;
@@ -27,16 +27,16 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+  background: linear-gradient(90deg, #6842e1, #9d2aae);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
 }
 
 .card:hover {
-  border-color: rgba(47, 128, 255, 0.35);
+  border-color: #c5b5f5;
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 50px rgba(157, 42, 174, 0.1);
 }
 
 .card:hover::before {
@@ -48,32 +48,27 @@
   font-size: 38px;
   font-weight: 800;
   font-family: 'Inter Tight', sans-serif;
-  background: linear-gradient(135deg, rgba(47, 128, 255, 0.25), rgba(0, 209, 255, 0.12));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #c5b5f5;
   line-height: 1;
   margin-bottom: 18px;
-  transition: background 0.3s;
+  transition: color 0.3s;
 }
 
 .card:hover .number {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #6842e1;
 }
 
 .cardTitle {
   font-size: 17px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #0d0a36;
   font-family: 'Inter Tight', sans-serif;
   margin: 0 0 12px;
 }
 
 .cardDesc {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: #5a6a7a;
   line-height: 1.7;
   margin: 0;
 }

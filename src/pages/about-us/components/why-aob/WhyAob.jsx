@@ -41,6 +41,7 @@ const WhyAob = () => {
         <SectionHeading
           heading="Why Businesses Trust AOB"
           subheading="What Makes AOB Different"
+          dark
         />
 
         <div className={styles.grid}>

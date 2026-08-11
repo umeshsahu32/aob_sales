@@ -22,7 +22,7 @@ const ContentBlock = ({ block, index }) => {
     case 'image':
       return (
         <div className={styles.inlineImage}>
-          <img src={block.img} alt="" loading="lazy" />
+          <img src={block.img} alt={block.caption || 'AOB India sales insights'} loading="lazy" />
         </div>
       );
     default:

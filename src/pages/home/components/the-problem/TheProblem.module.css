@@ -1,7 +1,7 @@
-.section {
-  padding: var(--section-padding);
-  background-color: var(--bg-primary);
+﻿.section {
+  padding: 40px 5%;
   text-align: center;
+  background: var(--color-secondary-bg);
 }
 
 /* ── Label ── */
@@ -11,7 +11,10 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #0274b0;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 16px;
 }
 
@@ -20,7 +23,7 @@
   font-size: clamp(26px, 3.5vw, 40px);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #0274b0;
+  color: var(--color-dark);
   margin-bottom: 16px;
 }
 
@@ -28,7 +31,7 @@
 .subtext {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--text-secondary);
+  color: #5a6a7a;
   max-width: 520px;
   margin: 0 auto 48px;
 }
@@ -38,43 +41,59 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 16px;
+  gap: 32px;
   max-width: 760px;
   margin: 0 auto 52px;
 }
 
 .col {
-  flex: 1;
-  padding: 28px 32px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 20px 24px;
   border-radius: 12px;
   border: 1.5px solid #e2e8f0;
-  background: #f8fafc;
+  background: var(--color-white);
   transition: box-shadow 0.2s;
+  min-width: 280px;
+}
+
+.col img{
+  width: 48px;
+  height: auto;
+  object-fit: contain;
+}
+
+.colText{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
 }
 
 /* Middle card — blue border highlight */
 .colActive {
   background: #ffffff;
-  border-color: #006da5;
-  box-shadow: 0 0 0 1px #006da5, 0 4px 18px rgba(0, 109, 165, 0.12);
+  border-color: #9d2aae;
+  box-shadow: 0 0 0 1px #9d2aae, 0 4px 18px rgba(157, 42, 174, 0.12);
 }
 
 .colTitle {
   font-size: 16px;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 
 .colSub {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: #5a6a7a;
 }
 
 /* ── Conclusion ── */
 .conclusion {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: #5a6a7a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +102,7 @@
 
 .conclusion p {
   font-size: 16px;
-  color: var(--text-secondary);
+  color: #5a6a7a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +111,10 @@
 }
 
 .conclusion strong {
-  color: #0274b0;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 700;
   font-size: 16px;
   font-style: normal;
@@ -108,3 +130,4 @@
     max-width: 320px;
   }
 }
+

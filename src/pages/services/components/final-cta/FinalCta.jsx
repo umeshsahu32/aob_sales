@@ -14,7 +14,7 @@ const FinalCta = () => {
         </p>
         <div className={styles.buttons}>
           <Button variant="primary">Build Your Sales Engine</Button>
-          <Button variant="secondary">Book Strategy Call</Button>
+          <Button variant="secondaryDark">Book Strategy Call</Button>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-import React from 'react';
 import SectionHeading from '../../../../components/SectionHeading';
 import styles from './AobAdvantage.module.css';
 
@@ -42,6 +41,7 @@ const AobAdvantage = () => {
         <SectionHeading
           heading="Why Businesses Work With AOB"
           subheading="The AOB Advantage"
+          dark
         />
 
         <div className={styles.grid}>

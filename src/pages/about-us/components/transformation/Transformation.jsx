@@ -34,6 +34,7 @@ const Transformation = () => {
           heading="From Sales Outsourcing to Revenue Engineering"
           subheading="The Transformation"
           supportingText="The world of sales has changed. Modern businesses need more than manpower — they need intelligent systems built for scale."
+          dark
         />
 
         <div className={styles.comparisonGrid}>

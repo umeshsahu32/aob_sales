@@ -1,11 +1,15 @@
 import SectionHeading from '../../../../components/SectionHeading';
 import styles from './OurPhilosophy.module.css';
+import disconnectedSystem from "../../../../assets/icons/about_us/Disconnected_systems.png"
+import poorExecution from "../../../../assets/icons/about_us/Poor_execution_visibility.png"
+import inconsistentProcess from "../../../../assets/icons/about_us/Inconsistent_processes.png"
+import underutilizedTechnology from "../../../../assets/icons/about_us/underutilized_technology.png"
 
 const painPoints = [
-  { label: 'Disconnected systems', icon: '⛓' },
-  { label: 'Poor execution visibility', icon: '👁' },
-  { label: 'Inconsistent processes', icon: '🔄' },
-  { label: 'Underutilized technology', icon: '⚙️' },
+  { label: 'Disconnected systems', icon: disconnectedSystem },
+  { label: 'Poor execution visibility', icon: poorExecution },
+  { label: 'Inconsistent processes', icon: inconsistentProcess },
+  { label: 'Underutilized technology', icon: underutilizedTechnology },
 ];
 
 const OurPhilosophy = () => {
@@ -33,7 +37,7 @@ const OurPhilosophy = () => {
         <div className={styles.painGrid}>
           {painPoints.map((pt) => (
             <div key={pt.label} className={styles.painCard}>
-              <span className={styles.painIcon}>{pt.icon}</span>
+             <img src={pt.icon} className={styles.painIcon} alt={pt.label} />
               <span className={styles.painLabel}>{pt.label}</span>
             </div>
           ))}

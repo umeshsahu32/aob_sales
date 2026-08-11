@@ -27,6 +27,7 @@ const OurApproach = () => {
             heading="We Start With Numbers"
             subheading="Our Approach"
             centered={false}
+            dark
           />
           <p className={styles.body}>
             Every business wants growth. But sustainable growth only happens when sales becomes

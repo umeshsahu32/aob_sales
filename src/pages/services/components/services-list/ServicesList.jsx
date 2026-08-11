@@ -1,12 +1,16 @@
 import SectionHeading from '../../../../components/SectionHeading';
 import styles from './ServicesList.module.css';
+import aiAutomation from '../../../../assets/icons/services/AI_AUTONATION.png'
+import aiPoweredSales from '../../../../assets/icons/services/ai_powered_sales.png'
+import meetingGeneration from '../../../../assets/icons/services/Meeting_Generation_Systems.png'
+import RevenueGeneration from '../../../../assets/icons/services/Revenue_Operations.png'
 
 const services = [
   {
     id: 'sales-outsourcing',
     number: '01',
-    icon: '🤝',
-    title: 'AI-Powered Sales Outsourcing',
+    icon: aiAutomation,
+    title: 'Sales Outsourcing Services',
     description:
       'Sales execution today requires more than manpower. AOB India combines trained execution teams, structured operational systems, reporting infrastructure, and AI-assisted workflows to build scalable sales ecosystems for businesses.',
     manages: [
@@ -37,8 +41,8 @@ const services = [
   {
     id: 'ai-automation',
     number: '02',
-    icon: '🤖',
-    title: 'AI Automation Systems',
+    icon: aiPoweredSales,
+    title: 'AI Automation Agency India',
     description:
       'Modern businesses lose significant time and revenue through repetitive operational tasks, disconnected workflows, and inconsistent follow-ups. AOB India designs automation systems that improve efficiency, reduce operational dependency, and create scalable execution frameworks.',
     manages: [
@@ -65,8 +69,8 @@ const services = [
   {
     id: 'revenue-operations',
     number: '03',
-    icon: '📊',
-    title: 'Sales Revenue Operations',
+    icon: RevenueGeneration ,
+    title: 'Sales Revenue Operations Outsourcing',
     description:
       'Most businesses operate with fragmented sales and operational systems. Sales Revenue Operations brings structure, visibility, accountability, and predictability into the entire revenue process.',
     manages: [
@@ -94,8 +98,8 @@ const services = [
   {
     id: 'meeting-generation',
     number: '04',
-    icon: '📅',
-    title: 'Meeting Generation Systems',
+    icon: meetingGeneration,
+    title: 'Lead Generation Services',
     description:
       'Modern outbound is not about mass outreach. It is about building structured systems that create meaningful business conversations with the right prospects — combining outbound workflows, targeting intelligence, process-driven execution, and structured qualification.',
     manages: [
@@ -128,7 +132,7 @@ const ServiceCard = ({ service, index }) => {
       <div className={styles.cardContent}>
         <div className={styles.cardTop}>
           <span className={styles.serviceNumber}>{service.number}</span>
-          <span className={styles.serviceIcon}>{service.icon}</span>
+          <img src={service.icon} className={styles.serviceIcon} alt={service.title} />
         </div>
         <h3 className={styles.serviceTitle}>{service.title}</h3>
         <p className={styles.serviceDesc}>{service.description}</p>

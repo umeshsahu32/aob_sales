@@ -1,11 +1,22 @@
-.hero {
-  min-height: 90vh;
+﻿.hero {
+  min-height: 80vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at right center, rgba(47, 128, 255, 0.12), transparent 50%),
-              radial-gradient(circle at left top, rgba(122, 92, 255, 0.08), transparent 40%);
+  background: #0d0a36;
+  padding: 100px 0 80px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  background: radial-gradient(ellipse 70% 70% at 80% 50%, rgba(104, 66, 225, 0.18), transparent);
+  pointer-events: none;
 }
 
 .grid {
@@ -17,49 +28,49 @@
 
 .label {
   display: inline-block;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-cyan);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 20px;
-  border: 1px solid rgba(0, 209, 255, 0.3);
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: rgba(0, 209, 255, 0.06);
 }
 
 .content h1 {
-  font-size: 64px;
-  font-weight: 700;
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
+  color: #ffffff;
 }
 
 .subheading {
-  font-size: 18px;
-  color: var(--text-primary);
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 16px;
   font-weight: 500;
   line-height: 1.6;
 }
 
 .supportingText {
-  font-size: 16px;
-  color: var(--text-secondary);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.62);
   margin-bottom: 40px;
   line-height: 1.7;
 }
 
 .buttons {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .visual {
   position: relative;
-  height: 420px;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,14 +79,15 @@
 .journeyCard {
   width: 100%;
   max-width: 380px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
-  animation: float 6s ease-in-out infinite;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .journeyTop {
@@ -100,48 +112,43 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+  background: linear-gradient(90deg, #6842e1, #9d2aae);
 }
 
 .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent-blue);
+  background: #6842e1;
   position: relative;
   z-index: 1;
 }
 
-.dot:nth-child(2) {
-  background: color-mix(in srgb, var(--accent-blue) 50%, var(--accent-cyan));
-}
-
-.dot:nth-child(3) {
-  background: var(--accent-cyan);
-}
+.dot:nth-child(2) { background: #9d2aae; }
+.dot:nth-child(3) { background: #0d0a36; }
 
 .yearBadge {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--text-secondary);
-  background: rgba(47, 128, 255, 0.1);
-  border: 1px solid rgba(47, 128, 255, 0.3);
-  padding: 6px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 12px;
   border-radius: 8px;
   white-space: nowrap;
 }
 
 .yearBadgeAccent {
-  color: var(--accent-cyan);
-  background: rgba(0, 209, 255, 0.1);
-  border-color: rgba(0, 209, 255, 0.3);
+  color: #a794f5;
+  background: rgba(168, 148, 245, 0.15);
+  border-color: rgba(168, 148, 245, 0.35);
 }
 
 .journeyLabels {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 24px;
 }
 
@@ -154,9 +161,9 @@
 .pillar {
   font-size: 12px;
   font-weight: 600;
-  color: var(--accent-blue);
-  background: rgba(47, 128, 255, 0.1);
-  border: 1px solid rgba(47, 128, 255, 0.2);
+  color: #a794f5;
+  background: rgba(168, 148, 245, 0.12);
+  border: 1px solid rgba(168, 148, 245, 0.3);
   padding: 4px 12px;
   border-radius: 20px;
 }
@@ -165,22 +172,21 @@
   position: absolute;
   bottom: 40px;
   right: 0;
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 20px 28px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  animation: float 6s ease-in-out infinite;
-  animation-delay: -2s;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   z-index: 3;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .statNumber {
   font-size: 36px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  background: linear-gradient(135deg, #a794f5, #d580ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -190,33 +196,12 @@
 
 .statLabel {
   font-size: 12px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
   white-space: nowrap;
 }
 
-.orb {
-  position: absolute;
-  top: 0;
-  left: -40px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(122, 92, 255, 0.15), transparent 70%);
-  z-index: 1;
-  animation: pulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes float {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes pulse {
-  0%   { transform: scale(0.9); opacity: 0.6; }
-  100% { transform: scale(1.1); opacity: 1; }
-}
+.orb { display: none; }
 
 @media (max-width: 1024px) {
   .grid {
@@ -224,25 +209,53 @@
     gap: 48px;
   }
 
-  .content h1 {
-    font-size: 48px;
-  }
+  .content h1 { font-size: 40px; }
 
-  .visual {
-    height: 300px;
-  }
+  .visual { height: 300px; }
 
-  .journeyCard {
-    max-width: 100%;
-  }
+  .journeyCard { max-width: 100%; }
 }
 
 @media (max-width: 768px) {
-  .content h1 {
-    font-size: 38px;
+  .content h1 { font-size: 34px; }
+
+  .buttons { flex-direction: column; }
+
+  .hero {
+    padding: 72px 0 56px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    padding: 56px 0 44px;
   }
 
-  .buttons {
-    flex-direction: column;
+  .content h1 { font-size: 30px; }
+
+  .statCard {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding: 48px 0 40px;
+  }
+
+  .content h1 { font-size: 28px; }
+
+  .supportingText {
+    font-size: 14px;
+  }
+
+  .visual {
+    min-height: auto;
+  }
+
+  .journeyCard {
+    padding: 20px;
   }
 }

@@ -8,7 +8,7 @@ const Hero = () => {
         <div className={styles.content}>
           <span className={styles.label}>About AOB India</span>
           <h1>
-            Engineering Sales Systems
+            Engineering Sales Revenue Systems
             <br />
             <span className="text-gradient">Since 2014</span>
           </h1>
@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
           <div className={styles.buttons}>
             <Button variant="primary">Build Your Sales Engine</Button>
-            <Button variant="secondary">Book Strategy Call</Button>
+            <Button variant="secondaryDark">Book Strategy Call</Button>
           </div>
         </div>
 

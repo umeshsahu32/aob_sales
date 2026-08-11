@@ -4,6 +4,7 @@ import playAndPlug from '../../../../assets/icons/home/plug_and_play.png'
 import ai_balance from '../../../../assets/icons/home/ai_balance.png'
 import end_to_end_ownership from '../../../../assets/icons/home/end_to_end_ownership.png'
 import ROI from '../../../../assets/icons/home/ROI.png'
+import experience from '../../../../assets/icons/home/12_years_experience.png'
 
 const reasons = [
   {
@@ -33,7 +34,7 @@ const reasons = [
     list: ['lower CAC', 'higher conversion', 'operational efficiency', 'scalable growth'],
   },
    {
-    Icon: ROI,
+    Icon: experience,
     title: '12 Years of Experience',
     body: "Built on years of execution, market insights, and continuous evolution across industries and business models.",
   },
@@ -50,14 +51,18 @@ const WhyAob = () => {
         <div className={styles.grid}>
           {reasons.map((r) => (
             <div key={r.title} className={styles.block}>
-              <img src={r.Icon} className={styles.reasonsIcons}/>
-              <h3 className={styles.blockTitle}>{r.title}</h3>
-              <p className={styles.blockBody}>{r.body}</p>
-              {r.list && (
-                <ul className={styles.roiList}>
-                  {r.list.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-              )}
+              <div className={styles.iconWrap}>
+                <img src={r.Icon} className={styles.reasonsIcons} alt={r.title} />
+              </div>
+              <div className={styles.textContent}>
+                <h3 className={styles.blockTitle}>{r.title}</h3>
+                <p className={styles.blockBody}>{r.body}</p>
+                {r.list && (
+                  <ul className={styles.roiList}>
+                    {r.list.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                )}
+              </div>
             </div>
           ))}
         </div>

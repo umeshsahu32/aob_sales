@@ -1,6 +1,7 @@
-.section {
+﻿.section {
   padding: var(--section-padding);
-  background-color: #ffffff;
+  background-color: var(--color-secondary-bg);
+  padding-top: 40px;
 }
 
 .headingWrap {
@@ -12,43 +13,42 @@
   font-size: clamp(26px, 3.2vw, 42px);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #0274b0;
+  color: var(--color-dark);
 }
 
-.servicesIcon{
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 20px;
+.section span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ── 2×2 grid ── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  max-width: 800px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin: auto;
 }
 
 /* ── Base card ── */
 .card {
-  background: #f4f6fb;
+  background: #fff;
   border: 1.5px solid transparent;
-  border-radius: 16px;
-  padding: 36px 36px 28px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
 }
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0, 61, 92, 0.09);
+  box-shadow: 0 8px 28px rgba(13, 10, 54, 0.09);
 }
 
 /* ── Active card (first) ── */
-
 
 /* ── Icon ── */
 .iconWrap {
@@ -56,34 +56,53 @@
 }
 
 /* ── Card text ── */
+
+.titleContainer {
+  padding: 10px 16px;
+}
+
 .cardTitle {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-  color: #003d5c;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 10px;
   line-height: 1.3;
 }
 
 .cardDesc {
   font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 24px;
+  color: #5a6a7a;
+  line-height: 1.2;
   flex-grow: 1;
+  min-height: 80px;
+}
+
+.servicesIcon {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
 }
 
 /* ── Full-width gradient CTA button ── */
 .ctaBtn {
   display: block;
   width: 100%;
-  padding: 13px 20px;
-  background: linear-gradient(135deg, #003d5c 0%, #006da5 100%);
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #6842e1 0%, #9d2aae 100%);
   color: #ffffff;
   font-size: 13px;
   font-weight: 700;
   border-radius: 8px;
   text-align: center;
-  transition: opacity 0.2s, transform 0.15s;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
   margin-bottom: 16px;
 }
 
@@ -96,7 +115,7 @@
 .learnMore {
   font-size: 14px;
   font-weight: 600;
-  color: #0274b0;
+  color: #6842e1;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -107,8 +126,35 @@
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  .headingWrap {
+    margin-bottom: 36px;
+  }
+}
+
 @media (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card {
+    padding: 28px 24px 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    padding: 24px 20px 18px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
   }
 }

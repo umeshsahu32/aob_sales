@@ -9,8 +9,8 @@ const Hero = () => {
       <div className={`container ${styles.inner}`}>
         <span className={styles.label}>AOB India Services</span>
         <h1 className={styles.heading}>
-          Sales Systems Built<br />
-          <span className="text-gradient">for Growth</span>
+          Sales Revenue Systems Built<br />
+          <span className="text-gradient">For Growth</span>
         </h1>
         <p className={styles.subheading}>
           We design, deploy, and run sales ecosystems that combine execution, process, technology,
@@ -30,7 +30,7 @@ const Hero = () => {
 
         <div className={styles.buttons}>
           <Button variant="primary">Build Your Sales Engine</Button>
-          <Button variant="secondary">Book Strategy Call</Button>
+          <Button variant="secondaryDark">Book Strategy Call</Button>
         </div>
       </div>
     </section>

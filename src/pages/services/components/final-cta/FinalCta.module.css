@@ -1,6 +1,6 @@
-.section {
-  padding: 120px 5%;
-  background: var(--bg-secondary);
+﻿.section {
+  padding: 100px 5%;
+  background: #0d0a36;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -9,13 +9,12 @@
 .section::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 700px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(47, 128, 255, 0.07), transparent 60%);
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(ellipse 60% 60% at 50% 40%, rgba(104, 66, 225, 0.18), transparent);
   pointer-events: none;
 }
 
@@ -27,48 +26,61 @@
 
 .label {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-cyan);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 20px;
 }
 
 .heading {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   font-family: 'Inter Tight', sans-serif;
-  color: var(--text-primary);
+  color: #ffffff;
   margin: 0 0 24px;
   line-height: 1.15;
 }
 
 .body {
   font-size: 17px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.7;
   margin: 0 0 48px;
 }
 
 .buttons {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 100px 5%;
-  }
+  .section { padding: 72px 5%; }
 
-  .heading {
-    font-size: 34px;
-  }
+  .heading { font-size: 32px; }
 
   .buttons {
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media (max-width: 620px) {
+  .section { padding: 56px 5%; }
+
+  .heading { font-size: 28px; }
+
+  .body { font-size: 15px; }
+}
+
+@media (max-width: 420px) {
+  .section { padding: 48px 4%; }
+
+  .heading { font-size: 26px; }
 }

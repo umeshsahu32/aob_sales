@@ -1,6 +1,6 @@
-.section {
+﻿.section {
   padding: var(--section-padding);
-  background: var(--bg-primary);
+  background: #ffffff;
 }
 
 .quoteBlock {
@@ -13,8 +13,7 @@
 .quoteMark {
   font-size: 120px;
   line-height: 0.6;
-  color: var(--accent-blue);
-  opacity: 0.25;
+  color: #c5b5f5;
   font-family: Georgia, serif;
   margin-bottom: 16px;
 }
@@ -22,17 +21,17 @@
 .quote {
   font-size: 24px;
   font-style: italic;
-  color: var(--text-primary);
+  color: #0d0a36;
   line-height: 1.6;
   font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 20px;
 }
 
 .author {
   font-size: 14px;
   font-weight: 600;
-  color: var(--accent-cyan);
+  color: #6842e1;
   letter-spacing: 1px;
 }
 
@@ -43,7 +42,7 @@
 
 .divider span {
   font-size: 16px;
-  color: var(--text-secondary);
+  color: #5a6a7a;
   position: relative;
   padding: 0 24px;
 }
@@ -55,16 +54,11 @@
   top: 50%;
   width: 60px;
   height: 1px;
-  background: var(--border-color);
+  background: #e2e8f0;
 }
 
-.divider span::before {
-  right: 100%;
-}
-
-.divider span::after {
-  left: 100%;
-}
+.divider span::before { right: 100%; }
+.divider span::after { left: 100%; }
 
 .painGrid {
   display: grid;
@@ -79,27 +73,29 @@
   align-items: center;
   gap: 12px;
   padding: 28px 20px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
   border-radius: 12px;
   text-align: center;
   transition: border-color 0.3s, transform 0.3s;
 }
 
 .painCard:hover {
-  border-color: rgba(47, 128, 255, 0.4);
+  border-color: #c5b5f5;
   transform: translateY(-2px);
 }
 
 .painIcon {
-  font-size: 28px;
-  line-height: 1;
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .painLabel {
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #0d0a36;
   line-height: 1.4;
 }
 
@@ -108,40 +104,54 @@
   margin: 0 auto;
   text-align: center;
   padding: 32px;
-  background: rgba(47, 128, 255, 0.05);
-  border: 1px solid rgba(47, 128, 255, 0.2);
+  background: rgba(157, 42, 174, 0.04);
+  border: 1px solid rgba(157, 42, 174, 0.15);
   border-radius: 16px;
 }
 
 .solution p {
   font-size: 18px;
-  color: var(--text-secondary);
+  color: #5a6a7a;
   line-height: 1.7;
   margin: 0;
 }
 
 .highlight {
-  color: var(--accent-cyan);
+  color: #6842e1;
   font-weight: 700;
 }
 
 @media (max-width: 768px) {
-  .painGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .painGrid { grid-template-columns: repeat(2, 1fr); }
 
-  .quote {
-    font-size: 20px;
-  }
+  .quote { font-size: 20px; }
 
   .divider span::before,
-  .divider span::after {
-    display: none;
-  }
+  .divider span::after { display: none; }
 }
 
 @media (max-width: 480px) {
-  .painGrid {
-    grid-template-columns: 1fr 1fr;
+  .painGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 420px) {
+  .quoteMark { font-size: 72px; }
+
+  .quote { font-size: 18px; }
+
+  .painCard {
+    padding: 20px 14px;
+  }
+
+  .solution {
+    padding: 20px;
+  }
+
+  .solution p {
+    font-size: 15px;
+  }
+
+  .divider {
+    margin: 36px 0 24px;
   }
 }

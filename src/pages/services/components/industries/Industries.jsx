@@ -1,15 +1,23 @@
 import SectionHeading from '../../../../components/SectionHeading';
 import styles from './Industries.module.css';
+import realEstate from "../../../../assets/images/Services/Realestate.webp"
+import edTech from "../../../../assets/images/Services/Edtech.webp"
+import manufacturing from "../../../../assets/images/Services/Manufacturing.webp"
+import healthcare from "../../../../assets/images/Services/healthcare.webp"
+import financialServices from "../../../../assets/images/Services/financial_services.webp"
+import b2bServices from "../../../../assets/images/Services/B2B_service.webp"
+import d2cBrands from "../../../../assets/images/Services/D2C_Brands.webp"
+import professionalServices from "../../../../assets/images/Services/professional_services.webp"
 
 const industries = [
-  { icon: '🏢', name: 'Real Estate' },
-  { icon: '📚', name: 'EdTech' },
-  { icon: '🏭', name: 'Manufacturing' },
-  { icon: '🏥', name: 'Healthcare' },
-  { icon: '💰', name: 'Financial Services' },
-  { icon: '🤝', name: 'B2B Services' },
-  { icon: '📦', name: 'D2C Brands' },
-  { icon: '💼', name: 'Professional Services' },
+  { icon: realEstate, name: 'Real Estate' },
+  { icon: edTech, name: 'EdTech' },
+  { icon: manufacturing, name: 'Manufacturing' },
+  { icon: healthcare, name: 'Healthcare' },
+  { icon: financialServices, name: 'Financial Services' },
+  { icon: b2bServices, name: 'B2B Services' },
+  { icon: d2cBrands, name: 'D2C Brands' },
+  { icon: professionalServices, name: 'Professional Services' },
 ];
 
 const alignmentPoints = [
@@ -41,7 +49,7 @@ const Industries = () => {
         <div className={styles.grid}>
           {industries.map((ind) => (
             <div key={ind.name} className={styles.card}>
-              <span className={styles.icon}>{ind.icon}</span>
+              <img src={ind.icon} className={styles.icon} alt={`${ind.name} sales outsourcing services`} loading="lazy" width="200" height="140" />
               <span className={styles.name}>{ind.name}</span>
             </div>
           ))}

@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
 import styles from "./Footer.module.css";
+import logo from '../assets/icons/home/aob_logo.png'
 
 const LinkedInIcon = () => (
   <svg
@@ -57,16 +56,7 @@ const services = [
 ];
 
 const Footer = () => {
-  const [showTop, setShowTop] = useState(false);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const onScroll = () => setShowTop(window.scrollY > 400);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   /* Navigate to homepage then scroll to the target service card */
   const goToService = (e, id) => {
@@ -91,6 +81,7 @@ const Footer = () => {
           <div className={styles.grid}>
             {/* ── Brand + Address ── */}
             <div className={styles.brand}>
+              <img src={logo} alt="AOB India"/>
               <h3 className={styles.brandName}>AOB India</h3>
               <p className={styles.brandTagline}>AI-Powered Sales Systems</p>
               <address className={styles.address}>
@@ -212,30 +203,6 @@ const Footer = () => {
         </div>
       </footer>
 
-      {/* ── Scroll to top (portalled to body so fixed positioning is never trapped) ── */}
-      {showTop &&
-        createPortal(
-          <button
-            className={styles.scrollTop}
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 19V5" />
-              <path d="M5 12l7-7 7 7" />
-            </svg>
-          </button>,
-          document.body,
-        )}
     </>
   );
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import caseStudies from '../../data/caseStudiesData';
 import styles from './CaseStudy.module.css';

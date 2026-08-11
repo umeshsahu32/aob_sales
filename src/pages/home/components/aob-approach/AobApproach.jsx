@@ -1,4 +1,4 @@
-import funnelImage from "../../../../assets/images/Home page/funnel-image.jpeg";
+import funnelImage from "../../../../assets/images/Home page/funnel-image.webp";
 import styles from "./AobApproach.module.css";
 
 const features = [
@@ -18,10 +18,10 @@ const CheckIcon = () => (
     fill="none"
     aria-hidden="true"
   >
-    <circle cx="9" cy="9" r="9" fill="#dbeafe" />
+    <circle cx="9" cy="9" r="9" fill="rgba(104, 66, 225, 0.25)" />
     <path
       d="M5.5 9l2.5 2.5 4.5-4.5"
-      stroke="#0274b0"
+      stroke="#a794f5"
       strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -35,10 +35,11 @@ const AobApproach = () => {
       <div className={`container ${styles.grid}`}>
         {/* ── Left content ── */}
         <div className={styles.content}>
-          <h2 className={styles.heading}>
-            <span className={styles.headingLight}>
+           <span className={styles.headingLight}>
               You Define the Revenue Goal.{" "}
             </span>
+          <h2 className={styles.heading}>
+           
             <span className={styles.headingDark}>
               We Build the Sales Engine.
             </span>
@@ -74,6 +75,9 @@ const AobApproach = () => {
             src={funnelImage}
             alt="Revenue funnel: Goal → Architecture → Leads → Growth"
             className={styles.funnelImg}
+            loading="lazy"
+            width="600"
+            height="450"
           />
         </div>
       </div>

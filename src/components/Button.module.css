@@ -2,36 +2,48 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
-  font-size: 16px;
+  padding: 13px 28px;
+  font-size: 15px;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: none;
   font-family: var(--font-body);
 }
 
 .primary {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  background: var(--gradient-primary);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(47, 128, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(157, 42, 174, 0.25);
 }
 
 .primary:hover {
-  box-shadow: 0 6px 20px rgba(47, 128, 255, 0.5);
+  box-shadow: 0 6px 22px rgba(157, 42, 174, 0.4);
   transform: translateY(-2px);
 }
 
+/* Secondary on light backgrounds */
 .secondary {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(10px);
+  background: transparent;
+  color: #6842e1;
+  border: 2px solid #6842e1;
 }
 
 .secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--text-secondary);
+  background: rgba(104, 66, 225, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Secondary on dark backgrounds */
+.secondaryDark {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondaryDark:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
 }

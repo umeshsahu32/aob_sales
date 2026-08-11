@@ -1,37 +1,34 @@
-.section {
-  padding: 100px 5%;
-  background: linear-gradient(150deg, #e8ecf8 0%, #eef0f8 50%, #e6eaf6 100%);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+﻿.section {
+  padding: 30px 40px;
+  background: var(--bg-header) !important;
 }
 
 .content {
-  position: relative;
-  z-index: 1;
-  max-width: 780px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  
 }
 
 /* ── Heading ── */
 .heading {
-  font-size: clamp(28px, 4vw, 46px);
+  font-size: clamp(22px, 3vw, 32px);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #0274b0;
-  margin-bottom: 20px;
+  color: var(--color-white);
+  margin-bottom: 10px;
   line-height: 1.2;
 }
 
 /* ── Subtext ── */
 .subtext {
   font-size: 15px;
-  color: var(--text-secondary);
-  margin-bottom: 40px;
+  color: var(--color-white);
   line-height: 1.7;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 500px;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 /* ── Buttons ── */
@@ -46,20 +43,20 @@
   display: inline-flex;
   align-items: center;
   padding: 14px 28px;
-  background: linear-gradient(135deg, #003d5c 0%, #006da5 100%);
+  background: linear-gradient(135deg, #6842e1 0%, #9d2aae 100%);
   color: #ffffff;
   font-size: 15px;
   font-weight: 700;
   border-radius: var(--radius-md);
   transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 18px rgba(0, 61, 92, 0.28);
+  box-shadow: 0 4px 18px rgba(13, 10, 54, 0.28);
   font-family: var(--font-body);
 }
 
 .btnPrimary:hover {
   opacity: 0.88;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0, 61, 92, 0.38);
+  box-shadow: 0 8px 28px rgba(13, 10, 54, 0.38);
 }
 
 .btnOutline {
@@ -67,21 +64,43 @@
   align-items: center;
   padding: 12px 28px;
   background: transparent;
-  color: #006da5;
+  color: var(--color-white);
   font-size: 15px;
   font-weight: 700;
   border-radius: var(--radius-md);
-  border: 2px solid #006da5;
+  border: 2px solid var(--color-white);
   transition: background 0.2s, transform 0.15s;
   font-family: var(--font-body);
 }
 
 .btnOutline:hover {
-  background: rgba(0, 109, 165, 0.07);
+  background: rgba(157, 42, 174, 0.07);
   transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 5%;
+  }
+}
+
+@media (max-width: 620px) {
+  .section {
+    padding: 56px 5%;
+  }
+}
+
 @media (max-width: 480px) {
+  .section {
+    padding: 48px 4%;
+  }
+
   .buttons { flex-direction: column; align-items: center; }
   .btnPrimary, .btnOutline { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding: 44px 4%;
+  }
 }
