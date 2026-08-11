@@ -43,7 +43,7 @@
   --font-body: "Inter", sans-serif;
 
   /* ── Spacing & Layout ── */
-  --section-padding: 90px 5%;
+  --section-padding: 40px 5%;
   --container-width: 1180px;
   --radius-sm: 8px;
   --radius-md: 12px;

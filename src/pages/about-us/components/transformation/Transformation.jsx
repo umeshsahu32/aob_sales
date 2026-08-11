@@ -31,8 +31,7 @@ const Transformation = () => {
     <section className={styles.section}>
       <div className="container">
         <SectionHeading
-          heading="From Sales Outsourcing to Revenue Engineering"
-          subheading="The Transformation"
+          heading={<>From Sales Outsourcing to <span>Revenue Engineering</span></>}
           supportingText="The world of sales has changed. Modern businesses need more than manpower — they need intelligent systems built for scale."
           dark
         />

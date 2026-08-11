@@ -26,22 +26,10 @@
   align-items: center;
 }
 
-.label {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 20px;
-}
-
 .content h1 {
   font-size: clamp(36px, 4.5vw, 56px);
   font-weight: 800;
+  letter-spacing: -0.02em;
   line-height: 1.1;
   margin-bottom: 24px;
   color: #ffffff;
@@ -170,8 +158,8 @@
 
 .statCard {
   position: absolute;
-  bottom: 40px;
-  right: 0;
+  bottom: 20px;
+  right: -40px;
   background: rgba(255, 255, 255, 0.06);
   border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
@@ -211,33 +199,45 @@
 
   .content h1 { font-size: 40px; }
 
-  .visual { height: 300px; }
+  .visual { min-height: 300px; }
 
+  .journeyCard { max-width: 480px; }
+}
+
+@media (max-width: 992px) {
   .journeyCard { max-width: 100%; }
 }
 
 @media (max-width: 768px) {
   .content h1 { font-size: 34px; }
 
-  .buttons { flex-direction: column; }
+  .buttons { flex-direction: column; align-items: stretch; }
 
   .hero {
     padding: 72px 0 56px;
   }
+
+  /* Unstack the floating stat card so it never overlaps the journey card */
+  .visual {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .statCard {
+    position: static;
+    margin-top: 0;
+    width: 100%;
+    max-width: 380px;
+  }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 624px) {
   .hero {
     padding: 56px 0 44px;
   }
 
   .content h1 { font-size: 30px; }
-
-  .statCard {
-    position: static;
-    margin-top: 20px;
-    width: 100%;
-  }
 }
 
 @media (max-width: 420px) {

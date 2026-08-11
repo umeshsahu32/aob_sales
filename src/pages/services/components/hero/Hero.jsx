@@ -1,5 +1,6 @@
 import Button from '../../../../components/Button';
 import styles from './Hero.module.css';
+import HeroBadge from '@/components/HeroBadge';
 
 const pillars = ['Structured Execution', 'Operational Intelligence', 'AI-Powered Systems', 'Revenue Management'];
 
@@ -7,7 +8,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
-        <span className={styles.label}>AOB India Services</span>
+        <HeroBadge text="AOB India Services"/>
         <h1 className={styles.heading}>
           Sales Revenue Systems Built<br />
           <span className="text-gradient">For Growth</span>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import bannerGraph from '@/assets/images/Home page/home-banner.png';
+import HeroBadge from '@/components/HeroBadge';
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -7,13 +8,13 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.content}>
-          <span className={styles.heroBadge}>AI-Powered</span>
+          <HeroBadge text="AI-POWERED" />
           <h1 className={styles.heading}>
             <span className={styles.headingWhite}>Revenue</span>
             <span className={styles.headingPurple}>Systems</span>
           </h1>
           <p className={styles.supportingText}>
-           We design, deploy, and run sales revenue engines powered by the right balance of People, Process, Technology, and AI. AOB India is a sales outsourcing company in India that helps businesses build predictable sales systems through AI automation, structured execution, and performance-driven sales operations.
+            We design, deploy, and run sales revenue engines powered by the right balance of People, Process, Technology, and AI. AOB India is a sales outsourcing company in India that helps businesses build predictable sales systems through AI automation, structured execution, and performance-driven sales operations.
           </p>
           <div className={styles.buttons}>
             <Link to="/contact-us" className={styles.btnPrimary}>
@@ -30,7 +31,7 @@ const Hero = () => {
             src={bannerGraph}
             alt="Revenue growth bar chart — AOB India AI-powered sales outsourcing"
             className={styles.heroImg}
-            fetchpriority="high"
+            fetchPriority="high"
             loading="eager"
             width="1672"
             height="941"

@@ -17,8 +17,7 @@ const AobStory = () => {
         {/* ── Left: narrative ── */}
         <div className={styles.content}>
           <SectionHeading
-            heading="Our Journey"
-            subheading="The AOB Story"
+            heading={<>The AOB <span>Story</span></>}
             centered={false}
           />
           <p className={styles.belief}>AOB India began with a simple belief:</p>

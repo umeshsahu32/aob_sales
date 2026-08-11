@@ -1,33 +1,48 @@
 .headerContainer {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .centered {
   text-align: center;
 }
 
+/* ── Eyebrow / subheading (gradient, matches home section labels) ── */
 .subheading {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  color: var(--color-heading);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 12px;
+  letter-spacing: 0.14em;
+  margin-bottom: 14px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
+/* ── Heading (matches home .sectionTitle: 800 weight, tight tracking) ── */
 .heading {
-  font-size: clamp(26px, 3.5vw, 42px);
-  font-weight: 700;
-  color: var(--color-dark-blue);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-dark);
   margin-bottom: 16px;
   line-height: 1.2;
 }
 
+/* Inline gradient emphasis inside a heading (e.g. <span>keyword</span>) */
+.heading span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .supportingText {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text-secondary);
-  max-width: 600px;
+  max-width: 560px;
   margin: 0 auto;
   line-height: 1.7;
 }
@@ -36,15 +51,7 @@
   margin: 0;
 }
 
-/* Dark background variant */
-.dark .subheading {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
+/* ── Dark background variant ── */
 .dark .heading {
   color: #ffffff;
 }
@@ -53,7 +60,7 @@
   color: rgba(255, 255, 255, 0.65);
 }
 
-@media (max-width: 620px) {
+@media (max-width: 624px) {
   .headerContainer {
     margin-bottom: 28px;
   }
@@ -61,10 +68,10 @@
 
 @media (max-width: 420px) {
   .heading {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .supportingText {
-    font-size: 15px;
+    font-size: 14px;
   }
 }

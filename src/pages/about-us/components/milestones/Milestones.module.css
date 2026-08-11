@@ -1,6 +1,6 @@
 ﻿.section {
   padding: var(--section-padding);
-  background: #ffffff;
+  background: #0d0a36;
 }
 
 .grid {
@@ -73,24 +73,25 @@
 .closing {
   max-width: 720px;
   margin: 0 auto;
+  margin-top: 40px;
   text-align: center;
   font-size: 17px;
-  color: #5a6a7a;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.7;
   font-style: italic;
   padding: 32px;
-  border: 1.5px solid #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.04);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 624px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -100,12 +101,6 @@
 
   .card {
     padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
   }
 }
 

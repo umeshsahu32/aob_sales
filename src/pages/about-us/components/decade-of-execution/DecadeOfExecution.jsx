@@ -24,8 +24,7 @@ const DecadeOfExecution = () => {
     <section className={styles.section}>
       <div className="container">
         <SectionHeading
-          heading="10+ Years of Operational Legacy"
-          subheading="A Decade of Execution"
+          heading={<>10+ Years of <span>Operational Legacy</span></>}
           supportingText="Over the last decade, AOB India has worked across diverse business categories, developing deep understanding of buyer psychology, sales systems, funnel behavior, and execution dynamics."
         />
 

@@ -1,15 +1,16 @@
-import SectionHeading from '../../../../components/SectionHeading';
+import SectionHeading from '@/components/SectionHeading';
+import RowItems from '@/components/RowItems';
 import styles from './OurPhilosophy.module.css';
-import disconnectedSystem from "../../../../assets/icons/about_us/Disconnected_systems.png"
-import poorExecution from "../../../../assets/icons/about_us/Poor_execution_visibility.png"
-import inconsistentProcess from "../../../../assets/icons/about_us/Inconsistent_processes.png"
-import underutilizedTechnology from "../../../../assets/icons/about_us/underutilized_technology.png"
+import disconnectedSystem from "@/assets/icons/about_us/Disconnected_systems.png"
+import poorExecution from "@/assets/icons/about_us/Poor_execution_visibility.png"
+import inconsistentProcess from "@/assets/icons/about_us/Inconsistent_processes.png"
+import underutilizedTechnology from "@/assets/icons/about_us/underutilized_technology.png"
 
 const painPoints = [
-  { label: 'Disconnected systems', icon: disconnectedSystem },
-  { label: 'Poor execution visibility', icon: poorExecution },
-  { label: 'Inconsistent processes', icon: inconsistentProcess },
-  { label: 'Underutilized technology', icon: underutilizedTechnology },
+  { title: 'Disconnected systems', icon: disconnectedSystem },
+  { title: 'Poor execution visibility', icon: poorExecution },
+  { title: 'Inconsistent processes', icon: inconsistentProcess },
+  { title: 'Underutilized technology', icon: underutilizedTechnology },
 ];
 
 const OurPhilosophy = () => {
@@ -17,8 +18,7 @@ const OurPhilosophy = () => {
     <section className={styles.section}>
       <div className="container">
         <SectionHeading
-          heading="Modern Sales Requires More Than Manpower"
-          subheading="Our Philosophy"
+          heading={<>Modern Sales Requires <span>More Than Manpower</span></>}
         />
 
         <div className={styles.quoteBlock}>
@@ -34,14 +34,7 @@ const OurPhilosophy = () => {
           <span>We believe businesses do not suffer from lack of effort. They suffer from:</span>
         </div>
 
-        <div className={styles.painGrid}>
-          {painPoints.map((pt) => (
-            <div key={pt.label} className={styles.painCard}>
-             <img src={pt.icon} className={styles.painIcon} alt={pt.label} />
-              <span className={styles.painLabel}>{pt.label}</span>
-            </div>
-          ))}
-        </div>
+        <RowItems data={painPoints}/>
 
         <div className={styles.solution}>
           <p>

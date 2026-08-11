@@ -2,6 +2,7 @@ import styles from "./TheProblem.module.css";
 import icon1 from "@/assets/icons/home/marketing_1.png";
 import icon2 from "@/assets/icons/home/people_1.png";
 import icon3 from "@/assets/icons/home/Operations_1.png";
+import RowItems from "@/components/RowItems";
 
 const columns = [
   { title: "Marketing", sub: "Works in a silo", icon: icon1 },
@@ -23,26 +24,14 @@ const TheProblem = () => {
           their sales ecosystem is disconnected.
         </p>
 
-        <div className={styles.columns}>
-          {columns.map((col, i) => (
-            <div
-              key={col.title}
-              className={`${styles.col} ${i === 1 ? styles.colActive : ""}`}
-            >
-              <img src={col.icon} alt={col.title} />
-              <div className={styles.colText}>
-                <div className={styles.colTitle}>{col.title}</div>
-                <div className={styles.colSub}>{col.sub}</div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <RowItems data={columns} />
 
         <p className={styles.conclusion}>
           Modern growth requires more than manpower.
           <strong>It requires a system.</strong>
-          <p>AOB India is a leading sales outsourcing company in India.</p>
+         
         </p>
+        <p>AOB India is a leading sales outsourcing company in India.</p>
       </div>
     </section>
   );

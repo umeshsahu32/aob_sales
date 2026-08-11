@@ -1,10 +1,11 @@
 import styles from './Hero.module.css';
+import HeroBadge from '@/components/HeroBadge';
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
-        <span className={styles.label}>Contact AOB India</span>
+      <HeroBadge text="Contact AOB India"/>
         <h1 className={styles.heading}>
           Let's Build Your<br />
           <span className="text-gradient">Sales System</span>

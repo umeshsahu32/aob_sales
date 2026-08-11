@@ -1,6 +1,6 @@
 ﻿.section {
   padding: var(--section-padding);
-  background: #ffffff;
+  background: #f0eeff;
 }
 
 .quoteBlock {
@@ -11,11 +11,16 @@
 }
 
 .quoteMark {
-  font-size: 120px;
-  line-height: 0.6;
-  color: #c5b5f5;
+  font-size: 92px;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: -28px;
+  display: block;
   font-family: Georgia, serif;
-  margin-bottom: 16px;
 }
 
 .quote {
@@ -121,17 +126,21 @@
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .painGrid { grid-template-columns: repeat(2, 1fr); }
+}
 
+@media (max-width: 768px) {
   .quote { font-size: 20px; }
 
   .divider span::before,
   .divider span::after { display: none; }
 }
 
-@media (max-width: 480px) {
-  .painGrid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 624px) {
+  .painGrid { gap: 14px; }
+
+  .solution { padding: 24px; }
 }
 
 @media (max-width: 420px) {

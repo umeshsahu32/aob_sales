@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useBlogs } from '../../hooks/useBlogs';
 import mediaItems from '../../data/mediaData';
+import HeroBadge from '@/components/HeroBadge';
 import styles from './BlogsMedia.module.css';
 
 const CATEGORIES = ['All', 'Business', 'Technology'];
@@ -67,7 +68,7 @@ const BlogsMedia = () => {
     <div className={styles.page}>
       <section className={styles.hero}>
         <div className="container">
-          <span className={styles.badge}>BLOGS & MEDIA</span>
+        <HeroBadge text="Blogs and Media"/>
           <h1 className={styles.heroTitle}>
             Knowledge <span className="text-gradient">Center</span>
           </h1>

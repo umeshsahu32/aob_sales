@@ -36,63 +36,6 @@
   margin: 0 auto 48px;
 }
 
-/* ── Three cards ── */
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 24px;
-  max-width: 860px;
-  margin: 0 auto 52px;
-}
-
-.col {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-  padding: 20px 24px;
-  border-radius: 12px;
-  border: 1.5px solid #e2e8f0;
-  background: var(--color-white);
-  transition: box-shadow 0.2s;
-  flex: 1 1 210px;
-  min-width: 0;
-}
-
-.col img{
-  width: 48px;
-  height: auto;
-  object-fit: contain;
-}
-
-.colText{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  gap: 0;
-}
-
-/* Middle card — blue border highlight */
-.colActive {
-  background: #ffffff;
-  border-color: #9d2aae;
-  box-shadow: 0 0 0 1px #9d2aae, 0 4px 18px rgba(157, 42, 174, 0.12);
-}
-
-.colTitle {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 0px;
-}
-
-.colSub {
-  font-size: 13px;
-  color: #5a6a7a;
-}
-
 /* ── Conclusion ── */
 .conclusion {
   font-size: 14px;
@@ -125,25 +68,6 @@
 
 /* Tablet: keep 3 tiles in a row, stacked as compact vertical cards */
 @media (max-width: 768px) {
-  .columns {
-    gap: 12px;
-    flex-wrap: nowrap;
-  }
-  .col {
-    flex: 1 1 0;
-    min-width: 0;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    padding: 20px 12px;
-  }
-  .colText {
-    align-items: center;
-  }
-  .col img {
-    width: 44px;
-  }
   .subtext br {
     display: none;
   }
@@ -151,19 +75,7 @@
 
 /* Mobile: single column */
 @media (max-width: 624px) {
-  .columns {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 40px;
-  }
-  .col {
-    width: 100%;
-    max-width: 320px;
-    flex: none;
-  }
   .subtext {
     margin-bottom: 36px;
   }
 }
-

@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import caseStudies from '../../data/caseStudiesData';
 import styles from './CaseStudy.module.css';
+import HeroBadge from '@/components/HeroBadge';
 
 const CaseStudy = () => (
   <div className={styles.page}>
     <section className={styles.hero}>
       <div className="container">
-        <span className={styles.badge}>CASE STUDIES</span>
+        <HeroBadge text="CASE STUDIES"/>
         <h1 className={styles.heroTitle}>
           Real Work.{' '}
           <span className="text-gradient">Real Results.</span>

@@ -1,12 +1,13 @@
 import Button from '../../../../components/Button';
 import styles from './Hero.module.css';
+import HeroBadge from '@/components/HeroBadge';
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.content}>
-          <span className={styles.label}>About AOB India</span>
+          <HeroBadge text="About AOB India" />
           <h1>
             Engineering Sales Revenue Systems
             <br />
@@ -35,7 +36,6 @@ const Hero = () => {
               <div className={styles.journeyLine}>
                 <div className={styles.dot}></div>
                 <div className={styles.dot}></div>
-                <div className={styles.dot}></div>
               </div>
               <div className={styles.yearBadge + ' ' + styles.yearBadgeAccent}>Today</div>
             </div>
@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
 
           <div className={styles.statCard}>
-            <div className={styles.statNumber}>10+</div>
+            <div className={styles.statNumber}>12+</div>
             <div className={styles.statLabel}>Years of Execution</div>
           </div>
 

@@ -40,7 +40,5 @@ for (const file of files) {
   totalSaved += saved;
 
   const pct = Math.round((saved / before) * 100);
-  console.log(`✓ ${basename(file)} → ${base}.webp  ${Math.round(before/1024)}KB → ${Math.round(after/1024)}KB  (-${pct}%)`);
 }
 
-console.log(`\nTotal saved: ${Math.round(totalSaved / 1024)}KB`);

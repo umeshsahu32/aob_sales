@@ -1,7 +1,7 @@
 ﻿/* ── Section ── */
 .section {
   padding: var(--section-padding);
-  background: #ffffff;
+  background: #f0eeff;
 }
 
 .grid {
@@ -197,8 +197,8 @@
   }
 }
 
-/* 760px – collapse timeline to single column (dot left, card right) */
-@media (max-width: 760px) {
+/* 768px – collapse timeline to single column (dot left, card right) */
+@media (max-width: 768px) {
   .timeline::before {
     left: 11px;
     top: 24px;
@@ -227,8 +227,8 @@
   }
 }
 
-/* 620px – tighten text */
-@media (max-width: 620px) {
+/* 624px – tighten text */
+@media (max-width: 624px) {
   .grid {
     gap: 40px;
   }
@@ -246,8 +246,8 @@
   }
 }
 
-/* 425px – mobile */
-@media (max-width: 425px) {
+/* 420px – mobile */
+@media (max-width: 420px) {
   .intersectionTags {
     gap: 8px;
   }

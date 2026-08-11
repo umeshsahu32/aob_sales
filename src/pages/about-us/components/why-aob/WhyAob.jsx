@@ -1,5 +1,6 @@
-import SectionHeading from '../../../../components/SectionHeading';
+import SectionHeading from '@/components/SectionHeading';
 import styles from './WhyAob.module.css';
+import NumberCard from '@/components/NumberCard';
 
 const differentiators = [
   {
@@ -39,20 +40,10 @@ const WhyAob = () => {
     <section className={styles.section}>
       <div className="container">
         <SectionHeading
-          heading="Why Businesses Trust AOB"
-          subheading="What Makes AOB Different"
+          heading={<>Why Businesses <span>Trust AOB</span></>}
           dark
         />
-
-        <div className={styles.grid}>
-          {differentiators.map((item) => (
-            <div key={item.number} className={styles.card}>
-              <span className={styles.number}>{item.number}</span>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.cardDesc}>{item.desc}</p>
-            </div>
-          ))}
-        </div>
+        <NumberCard data={differentiators} />
       </div>
     </section>
   );
