@@ -127,20 +127,40 @@ background: var(--gradient-primary);
   transform: translateY(-2px);
 }
 
-/* ── Hero image ── */
+/* ── Hero image (full-bleed, right side) ── */
 .visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  justify-content: flex-end;
+  pointer-events: none;
 }
 
 .heroImg {
-  width: 100%;
-  max-width: 680px;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+}
+
+/* Fade the image's left edge into the background so the copy stays readable */
+.visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #0d0a36 0%,
+    rgba(13, 10, 54, 0.75) 22%,
+    rgba(13, 10, 54, 0) 55%
+  );
+  pointer-events: none;
 }
 
 @keyframes floatY {
@@ -186,11 +206,20 @@ background: var(--gradient-primary);
   }
 
   .visual {
+    position: static;
     order: -1;
+    justify-content: center;
+    pointer-events: auto;
+  }
+
+  .visual::before {
+    display: none;
   }
 
   .heroImg {
-    max-width: 500px;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
   }
 }
 

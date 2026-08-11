@@ -1,4 +1,4 @@
-import funnelImage from "../../../../assets/images/Home page/funnel-without-bg.png";
+import funnelImage from "../../../../assets/images/Home page/funnel-cropped.png";
 import styles from "./AobApproach.module.css";
 
 const features = [
@@ -76,8 +76,8 @@ const AobApproach = () => {
             alt="Revenue funnel: Goal → Architecture → Leads → Growth"
             className={styles.funnelImg}
             loading="lazy"
-            width="600"
-            height="450"
+            width="966"
+            height="941"
           />
         </div>
       </div>

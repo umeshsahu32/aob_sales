@@ -32,8 +32,8 @@ const Hero = () => {
             className={styles.heroImg}
             fetchpriority="high"
             loading="eager"
-            width="680"
-            height="510"
+            width="1672"
+            height="941"
           />
         </div>
       </div>
