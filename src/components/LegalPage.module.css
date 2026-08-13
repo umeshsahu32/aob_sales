@@ -32,7 +32,7 @@
 .title {
   font-size: clamp(28px, 4vw, 46px);
   font-weight: 800;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: "Inter Tight", sans-serif;
   color: #ffffff;
   margin: 0 0 16px;
   line-height: 1.15;
@@ -72,6 +72,10 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+:global(.legal-section p) {
+  color: #fff;
+}
+
 :global(.legal-section:last-child) {
   border-bottom: none;
   margin-bottom: 0;
@@ -82,7 +86,7 @@
 :global(.legal-h2) {
   font-size: 22px;
   font-weight: 700;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: "Inter Tight", sans-serif;
   color: #ffffff;
   margin: 0 0 20px;
   display: flex;
@@ -99,7 +103,7 @@
   padding: 3px 10px;
   border-radius: 20px;
   white-space: nowrap;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   letter-spacing: 0.3px;
 }
 
@@ -109,7 +113,7 @@
   font-weight: 700;
   color: #ffffff;
   margin: 28px 0 10px;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: "Inter Tight", sans-serif;
 }
 
 :global(.legal-h3-num) {
@@ -145,7 +149,7 @@
 }
 
 :global(.legal-ul li::before) {
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -186,7 +190,9 @@
   text-decoration: none;
   font-weight: 600;
   border-bottom: 1px solid rgba(168, 148, 245, 0.4);
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 
 :global(.legal-email:hover) {
@@ -195,16 +201,28 @@
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 80px 5% 48px; }
-  .body { padding: 48px 5% 72px; }
+  .hero {
+    padding: 80px 5% 48px;
+  }
+  .body {
+    padding: 48px 5% 72px;
+  }
 }
 
 @media (max-width: 620px) {
-  .hero { padding: 72px 5% 40px; }
-  .body { padding: 40px 5% 60px; }
+  .hero {
+    padding: 72px 5% 40px;
+  }
+  .body {
+    padding: 40px 5% 60px;
+  }
 }
 
 @media (max-width: 420px) {
-  .hero { padding: 64px 4% 36px; }
-  .body { padding: 36px 4% 52px; }
+  .hero {
+    padding: 64px 4% 36px;
+  }
+  .body {
+    padding: 36px 4% 52px;
+  }
 }

@@ -1,12 +1,12 @@
 import SectionHeading from '@/components/SectionHeading';
 import HomeCard from '@/components/HomeCard';
 import styles from './Ecosystem.module.css';
-import leadSystem from '@/assets/icons/about_us/AI_Powered_Lead.png'
-import framework from '@/assets/icons/about_us/Qualification_Frameworks.png'
-import salesProcess from '@/assets/icons/about_us/Sales_Process.png'
-import revenueOperation from '@/assets/icons/about_us/Revenue_Operations.png'
+import leadSystem from '@/assets/icons/about_us/AI_Powered_Lead_1.png'
+import framework from '@/assets/icons/about_us/Qualification_Frameworks_1.png'
+import salesProcess from '@/assets/icons/about_us/Sales_Process_1.png'
+import revenueOperation from '@/assets/icons/about_us/Revenue_Operations_1.png'
 import outbound from '@/assets/icons/about_us/outbound.png'
-import salesPlatforms from '@/assets/icons/about_us/Sales_Infrastructure_Platforms.png'
+import salesPlatforms from '@/assets/icons/about_us/Sales_Infrastructure_Platforms_1.png'
 
 const verticals = [
   { icon: leadSystem, title: 'AI-Powered Lead Systems', desc: 'Intelligent lead generation and qualification at scale.' },

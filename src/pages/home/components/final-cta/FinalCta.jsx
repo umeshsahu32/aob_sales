@@ -12,7 +12,6 @@ const FinalCta = () => {
         </p>
         </div>
         <div className={styles.buttons}>
-          <Link to="/contact-us" className={styles.btnPrimary}>Book Strategy Call</Link>
           <Link to="/contact-us" className={styles.btnOutline}>Build Your Sales Engine</Link>
         </div>
       </div>

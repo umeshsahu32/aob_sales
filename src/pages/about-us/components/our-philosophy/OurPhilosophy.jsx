@@ -1,10 +1,10 @@
 import SectionHeading from '@/components/SectionHeading';
 import RowItems from '@/components/RowItems';
 import styles from './OurPhilosophy.module.css';
-import disconnectedSystem from "@/assets/icons/about_us/Disconnected_systems.png"
-import poorExecution from "@/assets/icons/about_us/Poor_execution_visibility.png"
-import inconsistentProcess from "@/assets/icons/about_us/Inconsistent_processes.png"
-import underutilizedTechnology from "@/assets/icons/about_us/underutilized_technology.png"
+import disconnectedSystem from "@/assets/icons/about_us/Disconnected_systems_1.png"
+import poorExecution from "@/assets/icons/about_us/Poor_execution_visibility_1.png"
+import inconsistentProcess from "@/assets/icons/about_us/Inconsistent_processes_1.png"
+import underutilizedTechnology from "@/assets/icons/about_us/underutilized_technology_1.png"
 
 const painPoints = [
   { title: 'Disconnected systems', icon: disconnectedSystem },

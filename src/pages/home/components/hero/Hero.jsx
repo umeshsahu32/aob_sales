@@ -20,9 +20,7 @@ const Hero = () => {
             <Link to="/contact-us" className={styles.btnPrimary}>
               Build Your Sales Engine
             </Link>
-            <Link to="/contact-us" className={styles.btnSecondary}>
-              Book Strategy Call
-            </Link>
+         
           </div>
         </div>
 

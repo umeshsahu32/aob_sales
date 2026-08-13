@@ -1,9 +1,9 @@
 import SectionHeading from '@/components/SectionHeading';
 import styles from './ServicesList.module.css';
-import aiAutomation from '@/assets/icons/services/AI_AUTONATION.png'
-import aiPoweredSales from '@/assets/icons/services/ai_powered_sales.png'
-import meetingGeneration from '@/assets/icons/services/Meeting_Generation_Systems.png'
-import RevenueGeneration from '@/assets/icons/services/Revenue_Operations.png'
+import aiAutomation from '@/assets/icons/services/AI_AUTONATION_1.png'
+import aiPoweredSales from '@/assets/icons/services/ai_powered_sales_1.png'
+import meetingGeneration from '@/assets/icons/services/Meeting_Generation_Systems_1.png'
+import RevenueGeneration from '@/assets/icons/services/Revenue_Operations_1.png'
 import HeroBadge from '@/components/HeroBadge';
 
 const services = [
