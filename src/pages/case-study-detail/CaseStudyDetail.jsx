@@ -161,7 +161,7 @@ const CaseStudyDetail = () => {
         <div className="container">
           <h2 className={styles.sectionTitle}>Strategic Outcome</h2>
           <p className={styles.transformIntro}>
-            Andromeda moved from manpower-led sales scaling to AI-powered revenue infrastructure.
+            {cs.transformIntro}
           </p>
           <div className={styles.transformGrid}>
             {cs.transformation.map((t, i) => (

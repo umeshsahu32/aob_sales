@@ -247,7 +247,13 @@
 }
 
 /* 420px – mobile */
-@media (max-width: 420px) {
+@media (max-width: 440px) {
+
+  .intersection {
+    padding: 22px 12px;
+  
+  }
+
   .intersectionTags {
     gap: 8px;
   }

@@ -5,7 +5,7 @@
 
 /* ── Back bar ── */
 .backBar {
-  padding: 104px 5% 0;
+  padding: 40px 5% 0;
 }
 
 .back {
@@ -494,7 +494,7 @@
 
 @media (max-width: 768px) {
   .backBar {
-    padding-top: 88px;
+    padding-top: 40px;
   }
 
   .challengeGrid {
